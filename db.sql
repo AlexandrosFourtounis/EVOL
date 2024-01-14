@@ -63,11 +63,12 @@ CREATE TABLE IF NOT EXISTS Rental
 
 CREATE TABLE IF NOT EXISTS Report
 (
-    vehicle_id INTEGER not null unique,
+    report_id INTEGER not null unique,
     malfunction_description VARCHAR(100),
     report_date DATE,
     insurance_paid BOOLEAN,
     repair_cost DOUBLE,
+    PRIMARY KEY(report_id),
     FOREIGN KEY(customer_id) REFERENCES Customer(customer_id),
     FOREIGN KEY(vehicle_id) REFERENCES Vehicle(vehicle_id)
 );
