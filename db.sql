@@ -61,6 +61,17 @@ CREATE TABLE IF NOT EXISTS Rental
     FOREIGN KEY(vehicle_id) REFERENCES Vehicle(vehicle_id)
 );
 
+CREATE TABLE IF NOT EXISTS Report
+(
+    vehicle_id INTEGER not null unique,
+    malfunction_description VARCHAR(100),
+    report_date DATE,
+    insurance_paid BOOLEAN,
+    repair_cost DOUBLE,
+    FOREIGN KEY(customer_id) REFERENCES Customer(customer_id),
+    FOREIGN KEY(vehicle_id) REFERENCES Vehicle(vehicle_id)
+);
+
 CREATE TABLE IF NOT EXISTS Car
 (
     vehicle_id INTEGER not null,
@@ -84,7 +95,7 @@ CREATE TABLE IF NOT EXISTS Bicycle
     FOREIGN KEY(vehicle_id) REFERENCES Vehicle(vehicle_id)
 );
 
-CREATE TABLE IF NOT EXISTS Bicycle
+CREATE TABLE IF NOT EXISTS Electric Scooter
 (
     vehicle_id INTEGER not null,
     special_number INTEGER not null unique,
