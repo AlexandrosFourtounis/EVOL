@@ -17,12 +17,12 @@ import java.util.logging.Logger;
 
 /**
  *
- * @author Mike
+ * @author Alexandros_Fourtounis
  */
 public class EditCustomerTable {
 
-    public void addBookingFromJSON(String json) throws ClassNotFoundException {
-        Customer r = jsonToBooking(json);
+    public void addCustomerFromJSON(String json) throws ClassNotFoundException {
+        Customer r = jsonToCustomer(json);
         createNewCustomer(r);
     }
 
@@ -45,13 +45,13 @@ public class EditCustomerTable {
         return null;
     }
 
-    public Customer jsonToBooking(String json) {
+    public Customer jsonToCustomer(String json) {
         Gson gson = new Gson();
         Customer r = gson.fromJson(json, Customer.class);
         return r;
     }
 
-    public String bookingToJSON(Customer r) {
+    public String CustomerToJSON(Customer r) {
         Gson gson = new Gson();
 
         String json = gson.toJson(r, Customer.class);
