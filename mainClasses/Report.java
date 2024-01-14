@@ -15,7 +15,7 @@ public class Report {
     double repair_cost;
     boolean insurance_paid;
 
-    public int getReport_id_id() {
+    public int getReport_id() {
         return report_id;
     }
 
