@@ -15,7 +15,7 @@ public class Report {
     double repair_cost;
     boolean insurance_paid;
 
-    public int getReport_id_id() {
+    public int getReport_id() {
         return report_id;
     }
 
@@ -39,13 +39,14 @@ public class Report {
         this.vehicle_id = vehicle_id;
     }
 
-    public double repair_cost() {
+    public double getRepair_cost() {
         return repair_cost;
     }
 
-    public void setrepair_cost(double repair_cost) {
+    public void setRepair_cost(double repair_cost) {
         this.repair_cost = repair_cost;
     }
+
 
     public String getMalfunction_description() {
         return malfunction_description;
@@ -61,5 +62,13 @@ public class Report {
 
     public void setReport_date(String report_date) {
         this.report_date = report_date;
+    }
+
+    public boolean getInsurance_paid() {
+        return insurance_paid;
+    }
+
+    public void setInsurance_paid(boolean insurance_paid) {
+        this.insurance_paid = insurance_paid;
     }
 }
