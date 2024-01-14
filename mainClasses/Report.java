@@ -62,4 +62,12 @@ public class Report {
     public void setReport_date(String report_date) {
         this.report_date = report_date;
     }
+
+    public boolean getInsurance_paid() {
+        return insurance_paid;
+    }
+
+    public void setInsurance_paid(boolean insurance_paid) {
+        this.insurance_paid = insurance_paid;
+    }
 }
