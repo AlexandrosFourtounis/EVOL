@@ -39,13 +39,14 @@ public class Report {
         this.vehicle_id = vehicle_id;
     }
 
-    public double repair_cost() {
+    public double getRepair_cost() {
         return repair_cost;
     }
 
-    public void setrepair_cost(double repair_cost) {
+    public void setRepair_cost(double repair_cost) {
         this.repair_cost = repair_cost;
     }
+
 
     public String getMalfunction_description() {
         return malfunction_description;
