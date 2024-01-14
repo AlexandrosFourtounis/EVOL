@@ -9,7 +9,7 @@ import com.google.gson.Gson;
 import com.google.gson.JsonArray;
 import database.tables.EditPetsTable;
 import static database.DB_Connection.getInitialConnection;
-import database.tables.EditBookingsTable;
+import database.tables.EditCustomerTable;
 import database.tables.EditMessagesTable;
 
 import database.tables.EditPetOwnersTable;
@@ -19,11 +19,11 @@ import java.sql.Connection;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
-import mainClasses.Message;
-import mainClasses.Pet;
-import mainClasses.PetKeeper;
-import mainClasses.PetOwner;
-import mainClasses.Review;
+//import mainClasses.Message;
+//import mainClasses.Pet;
+//import mainClasses.PetKeeper;
+//import mainClasses.PetOwner;
+//import mainClasses.Review;
 
 
 /*
@@ -47,7 +47,7 @@ public class InitDatabase {
     public void dropDatabase() throws SQLException, ClassNotFoundException {
         Connection conn = getInitialConnection();
         Statement stmt = conn.createStatement();
-        String sql = "DROP DATABASE  HY359_2023";
+        String sql = "DROP DATABASE";
         stmt.executeUpdate(sql);
         System.out.println("Database dropped successfully...");
     }
@@ -55,7 +55,7 @@ public class InitDatabase {
     public void initDatabase() throws SQLException, ClassNotFoundException {
         Connection conn = getInitialConnection();
         Statement stmt = conn.createStatement();
-        stmt.execute("CREATE DATABASE HY359_2023");
+        stmt.execute("CREATE DATABASE");
         stmt.close();
         conn.close();
     }
@@ -70,7 +70,7 @@ public class InitDatabase {
         EditPetsTable editpets = new EditPetsTable();
         editpets.createPetsTable();
 
-        EditBookingsTable editBookings = new EditBookingsTable();
+        EditCustomerTable editBookings = new EditCustomerTable();
         editBookings.createBookingTable();
 
         EditReviewsTable editRevs = new EditReviewsTable();
@@ -103,7 +103,7 @@ public class InitDatabase {
         ebt.addPetFromJSON(Resources.pet3);
         ebt.addPetFromJSON(Resources.pet4);
 
-        EditBookingsTable editbookings = new EditBookingsTable();
+        EditCustomerTable editbookings = new EditCustomerTable();
         editbookings.addBookingFromJSON(Resources.booking1);
         editbookings.addBookingFromJSON(Resources.booking2);
         editbookings.addBookingFromJSON(Resources.booking3);
