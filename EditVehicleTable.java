@@ -24,39 +24,39 @@ public class EditVehicleTable {
 
  
     public void addVehicleFromJSON(String json) throws ClassNotFoundException{
-         Vehicle user=jsonToVehicle(json);
-         addNewVehicle(user);
+         Vehicle vehicle=jsonToVehicle(json);
+         addNewVehicle(vehicle);
     }
     
     public Vehicle jsonToVehicle(String json){
          Gson gson = new Gson();
 
-        Vehicle user = gson.fromJson(json, Vehicle.class);
-        return user;
+        Vehicle vehicle = gson.fromJson(json, Vehicle.class);
+        return vehicle;
     }
     
-    public String VehicleToJSON(Vehicle user){
+    public String VehicleToJSON(Vehicle vehicle){
          Gson gson = new Gson();
 
-        String json = gson.toJson(user, Vehicle.class);
+        String json = gson.toJson(vehicle, Vehicle.class);
         return json;
     }
     
    
-    /*public void updateVehicle(String username,String personalpage) throws SQLException, ClassNotFoundException{
+    /*public void updateVehicle(String vehiclename,String personalpage) throws SQLException, ClassNotFoundException{
         Connection con = DB_Connection.getConnection();
         Statement stmt = con.createStatement();
-        String update="UPDATE Vehicles SET personalpage='"+personalpage+"' WHERE username = '"+username+"'";
+        String update="UPDATE Vehicles SET personalpage='"+personalpage+"' WHERE vehiclename = '"+vehiclename+"'";
         stmt.executeUpdate(update);
     }*/
     
-    /*public void printVehicleDetails(String username, String password) throws SQLException, ClassNotFoundException{
+    /*public void printVehicleDetails(String vehiclename, String password) throws SQLException, ClassNotFoundException{
          Connection con = DB_Connection.getConnection();
         Statement stmt = con.createStatement();
 
         ResultSet rs;
         try {
-            rs = stmt.executeQuery("SELECT * FROM Vehicle WHERE username = '" + username + "' AND password='"+password+"'");
+            rs = stmt.executeQuery("SELECT * FROM Vehicle WHERE vehiclename = '" + vehiclename + "' AND password='"+password+"'");
             while (rs.next()) {
                 System.out.println("===Result===");
                 DB_Connection.printResults(rs);
@@ -68,18 +68,18 @@ public class EditVehicleTable {
         }
     }*/
     
-    /*public Vehicle databaseToVehicles(String username, String password) throws SQLException, ClassNotFoundException{
+    /*public Vehicle databaseToVehicles(String vehiclename, String password) throws SQLException, ClassNotFoundException{
          Connection con = DB_Connection.getConnection();
         Statement stmt = con.createStatement();
 
         ResultSet rs;
         try {
-            rs = stmt.executeQuery("SELECT * FROM Vehicles WHERE username = '" + username + "' AND password='"+password+"'");
+            rs = stmt.executeQuery("SELECT * FROM Vehicles WHERE vehiclename = '" + vehiclename + "' AND password='"+password+"'");
             rs.next();
             String json=DB_Connection.getResultsToJSON(rs);
             Gson gson = new Gson();
-            Vehicle user = gson.fromJson(json, Vehicle.class);
-            return user;
+            Vehicle vehicle = gson.fromJson(json, Vehicle.class);
+            return vehicle;
         } catch (Exception e) {
             System.err.println("Got an exception! ");
             System.err.println(e.getMessage());
@@ -180,18 +180,18 @@ public class EditVehicleTable {
         stmt.execute(query);
         stmt.close();
     }
-    /*public Vehicle databaseToVehiclesUsername(String username) throws SQLException, ClassNotFoundException {
+    /*public Vehicle databaseToVehiclesvehiclename(String vehiclename) throws SQLException, ClassNotFoundException {
         Connection con = DB_Connection.getConnection();
         Statement stmt = con.createStatement();
 
         ResultSet rs;
         try {
-            rs = stmt.executeQuery("SELECT * FROM Vehicle WHERE username = '" + username + "'");
+            rs = stmt.executeQuery("SELECT * FROM Vehicle WHERE vehiclename = '" + vehiclename + "'");
             rs.next();
             String json = DB_Connection.getResultsToJSON(rs);
             Gson gson = new Gson();
-            Vehicle user = gson.fromJson(json, Vehicle.class);
-            return user;
+            Vehicle vehicle = gson.fromJson(json, Vehicle.class);
+            return vehicle;
         } catch (Exception e) {
             System.err.println("Got an exception! ");
             System.err.println(e.getMessage());
@@ -209,8 +209,8 @@ public class EditVehicleTable {
             rs.next();
             String json = DB_Connection.getResultsToJSON(rs);
             Gson gson = new Gson();
-            Vehicle user = gson.fromJson(json, Vehicle.class);
-            return user;
+            Vehicle vehicle = gson.fromJson(json, Vehicle.class);
+            return vehicle;
         } catch (Exception e) {
             System.err.println("Got an exception! ");
             System.err.println(e.getMessage());
@@ -222,7 +222,7 @@ public class EditVehicleTable {
      *
      * @throws ClassNotFoundException
      */
-    public void addNewVehicle(Vehicle user) throws ClassNotFoundException {
+    public void addNewVehicle(Vehicle vehicle) throws ClassNotFoundException {
         try {
             Connection con = DB_Connection.getConnection();
 
@@ -231,13 +231,13 @@ public class EditVehicleTable {
             String insertQuery = "INSERT INTO "
                     + " Vehicle (vehicle_id,color,brand,autonomy,daily_rental_cost,daily_insurance_cost,available)"
                     + " VALUES ("
-                    + "'" + user.getVehicle_id() + "',"
-                    + "'" + user.getColor() + "',"
-                    + "'" + user.getBrand() + "',"
-                    + "'" + user.getAutonomy() + "',"
-                    + "'" + user.getDaily_rental_cost() + "',"
-                    + "'" + user.getDaily_insurance_cost() + "',"
-                    + "'" + user.getAvailable() + "',"
+                    + "'" + vehicle.getVehicle_id() + "',"
+                    + "'" + vehicle.getColor() + "',"
+                    + "'" + vehicle.getBrand() + "',"
+                    + "'" + vehicle.getAutonomy() + "',"
+                    + "'" + vehicle.getDaily_rental_cost() + "',"
+                    + "'" + vehicle.getDaily_insurance_cost() + "',"
+                    + "'" + vehicle.getAvailable() + "',"
                     + ")";
             //stmt.execute(table);
             System.out.println(insertQuery);
