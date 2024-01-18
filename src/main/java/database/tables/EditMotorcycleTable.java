@@ -12,7 +12,6 @@ import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
-import java.util.ArrayList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -231,7 +230,7 @@ public class EditMotorcycleTable {
             String insertQuery = "INSERT INTO "
                     + " Motorcycle (Motorcycle_id,color,brand,autonomy,daily_rental_cost,daily_insurance_cost,available)"
                     + " VALUES ("
-                    + "'" + Motorcycle.getMotorcycle_id() + "',"
+                    + "'" + Motorcycle.getVehicle_id() + "',"
                     + "'" + Motorcycle.getColor() + "',"
                     + "'" + Motorcycle.getBrand() + "',"
                     + "'" + Motorcycle.getAutonomy() + "',"
@@ -248,7 +247,7 @@ public class EditMotorcycleTable {
             stmt.close();
 
         } catch (SQLException ex) {
-            Logger.getLogger(EditMotorcyclesTable.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(EditMotorcycleTable.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
 
