@@ -94,15 +94,18 @@ public class InitDatabase {
         editc.addCustomerFromJSON(Resources.petKeeper6);
 
         EditRegistrationTable ebt = new EditRegistrationTable();
-        ebt.addRegistrationFromJSON(Resources.pet1);
-        ebt.addRegistrationFromJSON(Resources.pet2);
-        ebt.addRegistrationFromJSON(Resources.pet3);
-        ebt.addRegistrationFromJSON(Resources.pet4);
+        ebt.addRegistrationFromJSON(Resources.registration1);
+        ebt.addRegistrationFromJSON(Resources.registration2);
+        ebt.addRegistrationFromJSON(Resources.registration3);
+        ebt.addRegistrationFromJSON(Resources.registration4);
+        ebt.addRegistrationFromJSON(Resources.registration5);
 
         EditRentalTable ren = new EditRentalTable();
-        ren.addRentalFromJSON(Resources.booking1);
-        ren.addRentalFromJSON(Resources.booking2);
-        ren.addRentalFromJSON(Resources.booking3);
+        ren.addRentalFromJSON(Resources.rental1);
+        ren.addRentalFromJSON(Resources.rental2);
+        ren.addRentalFromJSON(Resources.rental3);
+        ren.addRentalFromJSON(Resources.rental4);
+        ren.addRentalFromJSON(Resources.rental5);
 
         EditReportTable rep = new EditReportTable();
         rep.addReportFromJSON(Resources.message1);
