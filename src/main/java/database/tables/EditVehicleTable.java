@@ -12,7 +12,6 @@ import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
-import java.util.ArrayList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -248,7 +247,7 @@ public class EditVehicleTable {
             stmt.close();
 
         } catch (SQLException ex) {
-            Logger.getLogger(EditVehiclesTable.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(EditVehicleTable.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
 
