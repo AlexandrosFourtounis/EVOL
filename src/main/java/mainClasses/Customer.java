@@ -11,8 +11,8 @@ package mainClasses;
  */
 public class Customer {
     int customer_id, registration_id;
-    String firstname, lastname, street, city, region, date_of_birth, expiration_date;
-    int age, zip_code, drivers_licence_number, credit_card_number, security_code;
+    String firstname, lastname, street, city, region, expiration_date;
+    int age, zip_code, drivers_licence_number, credit_card_number, security_code, date_of_birth;
 
     public int getRegistartion_id() {
         return registration_id;
@@ -70,11 +70,11 @@ public class Customer {
         this.region = region;
     }
 
-    public String getDate_of_birth() {
+    public int getDate_of_birth() {
         return date_of_birth;
     }
 
-    public void setDate_of_birth(String date_of_birth) {
+    public void setDate_of_birth(int date_of_birth) {
         this.date_of_birth = date_of_birth;
     }
 
