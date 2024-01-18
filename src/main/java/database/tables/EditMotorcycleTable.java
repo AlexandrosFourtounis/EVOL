@@ -221,7 +221,7 @@ public class EditMotorcycleTable {
      *
      * @throws ClassNotFoundException
      */
-    public void addNewMotorcycle(Motorcycle Motorcycle) throws ClassNotFoundException {
+    public void addMotorcycle(Motorcycle Motorcycle) throws ClassNotFoundException {
         try {
             Connection con = DB_Connection.getConnection();
 
