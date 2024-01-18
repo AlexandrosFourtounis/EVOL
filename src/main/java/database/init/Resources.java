@@ -170,6 +170,66 @@ public class Resources {
     static String Bicycle5 = "{\"vehicle_id\":\"5\","
             + "\"special_number\":\"102\"}";
 
+        static String registration1 = "{\"registration_id\":\"11\",\"customer_id\":\"1\",\"username\":\"anton3\","
+            + "\"pass\":\"anton3!\",\"registration_date\":\"2022-10-10\"}";
+
+    static String registration2 = "{\"registration_id\":\"22\",\"customer_id\":\"2\",\"username\":\"cat5\","
+            + "\"pass\":\"cat5!\",\"registration_date\":\"2024-01-01\"}";
+
+    static String registration3 = "{\"registration_id\":\"33\",\"customer_id\":\"3\",\"username\":\"mariab8\","
+            + "\"pass\":\"mariab8!\",\"registration_date\":\"2023-11-25\"}";
+
+    static String registration4 = "{\"registration_id\":\"44\",\"customer_id\":\"4\",\"username\":\"angel10\","
+            + "\"pass\":\"angel10!\",\"registration_date\":\"2023-10-21\"}";
+
+    static String registration5 = "{\"registration_id\":\"55\",\"customer_id\":\"5\",\"username\":\"makis2\","
+            + "\"pass\":\"makis2!\",\"registration_date\":\"2023-10-10\"}";
+
+            static String rental1 = "{\"rental_id\":\"101\","
+            + "\"customer_id\":\"1\","
+            + "\"vehicle_id\":\"1\","
+            + "\"first_name\":\"akis\","
+            + "\"last_name\":\"papakis\","
+            + "\"rental_date\":\"2022-04-16\","
+            + "\"duration\":\"10\","
+            + "\"cost\":\"450\"   }";
+
+    
+    static String rental2 = "{\"rental_id\":\"202\","
+            + "\"customer_id\":\"2\","
+            + "\"vehicle_id\":\"2\","
+            + "\"first_name\":\"manos\","
+            + "\"last_name\":\"papas\","
+            + "\"rental_date\":\"2023-08-11\","
+            + "\"duration\":\"5\","
+            + "\"cost\":\"1400\"   }";
+
+    static String rental3 = "{\"rental_id\":\"303\","
+            + "\"customer_id\":\"3\","
+            + "\"vehicle_id\":\"3\","
+            + "\"first_name\":\"ariadni\","
+            + "\"last_name\":\"mixail\","
+            + "\"rental_date\":\"2023-02-18\","
+            + "\"duration\":\"2\","
+            + "\"cost\":\"84\"   }";
+
+    static String rental4 = "{\"rental_id\":\"404\","
+            + "\"customer_id\":\"4\","
+            + "\"vehicle_id\":\"4\","
+            + "\"first_name\":\"charalabos\","
+            + "\"last_name\":\"arampatzis\","
+            + "\"rental_date\":\"2024-01-02\","
+            + "\"duration\":\"1\","
+            + "\"cost\":\"470\"   }";
+
+    static String rental5 = "{\"rental_id\":\"505\","
+            + "\"customer_id\":\"5\","
+            + "\"vehicle_id\":\"5\","
+            + "\"first_name\":\"aggela\","
+            + "\"last_name\":\"eftimiou\","
+            + "\"rental_date\":\"2023-06-06\","
+            + "\"duration\":\"3\","
+            + "\"cost\":\"720\"   }";
 
     public static Object registeredUsers;
 }
