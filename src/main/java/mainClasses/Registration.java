@@ -11,7 +11,7 @@ package mainClasses;
  */
 public class Registration {
     int registration_id, customer_id;
-    String vehiclename, password, registration_date;
+    String username, password, registration_date;
 
     public int getRegistartion_id() {
         return registration_id;
@@ -29,12 +29,12 @@ public class Registration {
         this.customer_id = customer_id;
     }
 
-    public String getvehiclename() {
-        return vehiclename;
+    public String getUsername() {
+        return username;
     }
 
-    public void setvehiclename(String vehiclename) {
-        this.vehiclename = vehiclename;
+    public void setUsername(String username) {
+        this.username = username;
     }
 
     public String getPassword() {
