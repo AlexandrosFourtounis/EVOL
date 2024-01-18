@@ -68,6 +68,12 @@ public class InitDatabase {
 
         EditMotorcycleTable mot = new EditMotorcycleTable();
         mot.createMotorcyclesTable();
+
+        EditElectricScooterTable elc = new EditElectricScooterTable();
+        elc.createElectricScooterTable();
+
+        EditBicycleTable bic = new EditBicycleTable();
+        bic.createBicycleTable();
     }
 
     public void addToDatabaseExamples() throws ClassNotFoundException, SQLException {
@@ -107,6 +113,9 @@ public class InitDatabase {
 
         EditMotorcycleTable motr = new EditMotorcycleTable();
         motr.addMotorcycleFromJSON(Resources.review1);
+
+        EditBicycleTable bicy = new EditBicycleTable();
+        bicy.addBicycleFromJSON(Resources.review1);
     }
 
     /*
