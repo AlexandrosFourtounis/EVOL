@@ -24,7 +24,7 @@ public class EditCarTable {
  
     public void addcarFromJSON(String json) throws ClassNotFoundException{
         Car car = jsonTocar(json);
-         addNewcar(car);
+        addNewcar(car);
     }
     
     public Car jsonTocar(String json) {

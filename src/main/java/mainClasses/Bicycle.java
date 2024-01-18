@@ -11,7 +11,6 @@ package mainClasses;
  */
 public class Bicycle extends Vehicle {
 
-    int vehicle_id;
     int special_number;
 
     public int getVehicle_id() {

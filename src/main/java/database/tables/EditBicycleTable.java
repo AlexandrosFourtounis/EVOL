@@ -168,7 +168,8 @@ public class EditBicycleTable {
 
         String query = "CREATE TABLE Bicycle "
                 + "(Vehicle_id INTEGER not null, "
-                + "    Special_number INTEGER not null unique,";
+                 + "    Special_number INTEGER not null unique,"
+                 + "PRIMARY KEY (special_number))";
         stmt.execute(query);
         stmt.close();
     }

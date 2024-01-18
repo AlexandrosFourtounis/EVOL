@@ -11,7 +11,7 @@ package mainClasses;
  */
 public class Vehicle {
     int vehicle_id;
-    boolean available;
+    String available;
     String color, brand, driver;
     int autonomy, daily_rental_cost, daily_insurance_cost;
 
@@ -23,11 +23,11 @@ public class Vehicle {
         this.vehicle_id = vehicle_id;
     }
 
-    public boolean getAvailable() {
+    public String getAvailable() {
         return available;
     }
 
-    public void setAvailable(boolean available) {
+    public void setAvailable(String available) {
         this.available = available;
     }
 

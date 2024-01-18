@@ -173,8 +173,7 @@ public class EditVehicleTable {
                 + "    autonomy INTEGER,"
                 + "    daily_rental_cost INTEGER,"
                 + "    daily_insurance_cost INTEGER,"
-                + "    available BOOLEAN,"
-                + "    gender  VARCHAR (7) not null,"
+                + "    available VARCHAR(20),"
                 + " PRIMARY KEY (vehicle_id))";
         stmt.execute(query);
         stmt.close();
@@ -236,7 +235,7 @@ public class EditVehicleTable {
                     + "'" + vehicle.getAutonomy() + "',"
                     + "'" + vehicle.getDaily_rental_cost() + "',"
                     + "'" + vehicle.getDaily_insurance_cost() + "',"
-                    + "'" + vehicle.getAvailable() + "',"
+                    + "'" + vehicle.getAvailable() + "'"
                     + ")";
             //stmt.execute(table);
             System.out.println(insertQuery);

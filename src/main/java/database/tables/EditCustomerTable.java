@@ -71,7 +71,7 @@ public class EditCustomerTable {
         Connection con = DB_Connection.getConnection();
         Statement stmt = con.createStatement();
         String sql = "CREATE TABLE Customer "
-                + "(customer_id INTEGER not NULL AUTO_INCREMENT, "
+                + "(customer_id INTEGER not NULL , "
                 + " registration_id INTEGER not NULL, "
                 + " first_name VARCHAR(20) not NULL, "
                 + " last_name VARCHAR(20), "
@@ -79,14 +79,14 @@ public class EditCustomerTable {
                 + " date_of_birth INTEGER, "
                 + " drivers_licence_number INTEGER not NULL unique, "
                 + " credit_card_number VARCHAR(20) not NULL unique, "
-                + " expiration_date VARCHAR(20) DATE not NULL, "
+                + " expiration_date VARCHAR(20) not NULL, "
                 + " security_code INTEGER not NULL, "
                 + " city VARCHAR(20), "
                 + " region VARCHAR(20), "
                 + " zip_code INTEGER, "
                 + " age INTEGER, "
-                + " PRIMARY KEY (customer_id),"
-                + "FOREIGN KEY (registration_id) REFERENCES Registration(registration_id))";
+                + " PRIMARY KEY (customer_id), "
+                + " FOREIGN KEY(registration_id) REFERENCES Registration(registration_id))";
         stmt.execute(sql);
         stmt.close();
         con.close();
@@ -105,23 +105,25 @@ public class EditCustomerTable {
             Statement stmt = con.createStatement();
 
             String insertQuery = "INSERT INTO "
-                    + " Customer (first_name,last_name,street,date_of_birth,drivers_licence_number,credit_card_number,"
-                    + "expiration_date,security_code,city,region,zip_code,age,registration_id)"
+                    + "Customer (customer_id, registration_id, first_name, last_name, street, date_of_birth, drivers_licence_number, credit_card_number, "
+                    + "expiration_date, security_code, city, region, zip_code, age)"
                     + " VALUES ("
+                    + "'" + cust.getCustomer_id() + "',"
+                    + "'" + cust.getRegistartion_id() + "',"
                     + "'" + cust.getFirstname() + "',"
                     + "'" + cust.getLastname() + "',"
                     + "'" + cust.getStreet() + "',"
                     + "'" + cust.getDate_of_birth() + "',"
                     + "'" + cust.getDrivers_licence_number() + "',"
                     + "'" + cust.getCredit_card_number() + "',"
-                    + "'" + cust.getExpiration_date() + "'"
-                    + "'" + cust.getSecurity_code() + "'"
-                    + "'" + cust.getCity() + "'"
-                    + "'" + cust.getRegion() + "'"
-                    + "'" + cust.getZip_code() + "'"
+                    + "'" + cust.getExpiration_date() + "',"
+                    + "'" + cust.getSecurity_code() + "',"
+                    + "'" + cust.getCity() + "',"
+                    + "'" + cust.getRegion() + "',"
+                    + "'" + cust.getZip_code() + "',"
                     + "'" + (2024 - cust.getDate_of_birth()) + "'"
-                    + "'" + cust.getRegistartion_id() + "'"
                     + ")";
+
             //stmt.execute(table);
 
             stmt.executeUpdate(insertQuery);

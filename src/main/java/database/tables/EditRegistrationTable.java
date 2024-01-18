@@ -74,8 +74,7 @@ public class EditRegistrationTable {
                 + " username VARCHAR(20) not null unique, "
                 + " pass VARCHAR(20) not null, "
                 + " registration_date DATE, "
-                + " PRIMARY KEY(registration_id), "
-                + "FOREIGN KEY(customer_id) REFERENCES Customer(customer_id))";
+                + " PRIMARY KEY(registration_id))";
         stmt.execute(sql);
         stmt.close();
         con.close();
@@ -94,14 +93,13 @@ public class EditRegistrationTable {
             Statement stmt = con.createStatement();
 
             String insertQuery = "INSERT INTO "
-                    + " Registration (registration_id,customer_id,username,pass,registration_date,customer_id)"
+                    + " Registration (registration_id,customer_id,username,pass,registration_date)"
                     + " VALUES ("
                     + "'" + reg.getRegistartion_id() + "',"
                     + "'" + reg.getCustomer_id() + "',"
                     + "'" + reg.getUsername() + "',"
                     + "'" + reg.getPassword() + "',"
-                    + "'" + reg.getRegistration_date() + "',"
-                    + "'" + reg.getCustomer_id() + "'"
+                    + "'" + reg.getRegistration_date() + "'"
                     + ")";
             //stmt.execute(table);
 

@@ -13,34 +13,34 @@ public class Resources {
 
     static String CustomertoJSON1 = "{\"customer_id\":\"1\",\"registration_id\":\"11\",\"firstname\":\"alexandros\","
             + "\"lastname\":\"fourtounis\",\"street\":\"theodoulou18\",\"date_of_birth\":\"2003\",\"drivers_licence_number\":\"123456789\","
-            + "\"credit_card_number\":\"5556669990\",\"expiration_date\":\"19of26\",\"security_code\":\"486\",\"city\":\"Heraklio\","
+            + "\"credit_card_number\":\"5556690\",\"expiration_date\":\"19of26\",\"security_code\":\"486\",\"city\":\"Heraklio\","
             + "\"region\":\"Heraklion\",\"zip_code\":\"71305\","
             + "\"age\":\"18\","
-            + "\"drivers\":\"Alex,George\"}";
+            + "\"drivers\":\"Alex George\"}";
 
     static String CustomertoJSON2 = "{\"customer_id\":\"2\",\"registration_id\":\"22\",\"firstname\":\"yannis\","
             + "\"lastname\":\"mpakas\",\"street\":\"nauarinou\",\"date_of_birth\":\"2005\",\"drivers_licence_number\":\"123686789\","
-            + "\"credit_card_number\":\"4446669990\",\"expiration_date\":\"18of26\",\"security_code\":\"476\",\"city\":\"Thessaloniki\","
+            + "\"credit_card_number\":\"444699\",\"expiration_date\":\"18of26\",\"security_code\":\"476\",\"city\":\"Thessaloniki\","
             + "\"region\":\"Thessaloniki\",\"zip_code\":\"60100\","
             + "\"age\":\"20\","
             + "\"drivers\":\"Yannis\"}";
 
     static String CustomertoJSON3 = "{\"customer_id\":\"3\",\"registration_id\":\"33\",\"firstname\":\"mpampis\","
             + "\"lastname\":\"mpampinos\",\"street\":\"plastira2\",\"date_of_birth\":\"2000\",\"drivers_licence_number\":\"1222256789\","
-            + "\"credit_card_number\":\"5556669222\",\"expiration_date\":\"19of26\",\"security_code\":\"222\",\"city\":\"Athens\","
+            + "\"credit_card_number\":\"555662\",\"expiration_date\":\"19of26\",\"security_code\":\"222\",\"city\":\"Athens\","
             + "\"region\":\"Pireas\",\"zip_code\":\"1002\","
             + "\"age\":\"21\","
             + "\"drivers\":\"Mpampis\"}";
 
     static String CustomertoJSON4 = "{\"customer_id\":\"4\",\"registration_id\":\"44\",\"firstname\":\"nikos\","
             + "\"lastname\":\"nikolaidis\",\"street\":\"theodoulou18\",\"date_of_birth\":\"2003\",\"drivers_licence_number\":\"123426789\","
-            + "\"credit_card_number\":\"5556669992\",\"expiration_date\":\"19of26\",\"security_code\":\"486\",\"city\":\"Heraklio\","
+            + "\"credit_card_number\":\"555692\",\"expiration_date\":\"19of26\",\"security_code\":\"486\",\"city\":\"Heraklio\","
             + "\"region\":\"Heraklion\",\"zip_code\":\"71305\","
             + "\"age\":\"25\","
             + "\"drivers\":\"Alex\"}";
     static String CustomertoJSON5 = "{\"customer_id\":\"5\",\"registration_id\":\"55\",\"firstname\":\"niskos\","
             + "\"lastname\":\"nikolaidis\",\"street\":\"theodoulou18\",\"date_of_birth\":\"2003\",\"drivers_licence_number\":\"123426789\","
-            + "\"credit_card_number\":\"5556669988\",\"expiration_date\":\"19of26\",\"security_code\":\"486\",\"city\":\"Heraklio\","
+            + "\"credit_card_number\":\"555988\",\"expiration_date\":\"19of26\",\"security_code\":\"486\",\"city\":\"Heraklio\","
             + "\"region\":\"Heraklion\",\"zip_code\":\"71305\","
             + "\"age\":\"25\","
             + "\"drivers\":\"niskos\"}";
@@ -57,7 +57,7 @@ public class Resources {
     static String CartoJSON4 = "{\"vehicle_id\":\"4\",\"registration_number\":\"4123\",\"car_type\":\"lambo\","
             + "\"number_of_passengers\":\"2\"}";
 
-    static String CartoJSON5 = "{\"vehicle_id\":\"5\",\"registration_number\":\"12355\",\"car_type\":\"skoda\","
+    static String CartoJSON5 = "{\"vehicle_id\":\"5\",\"registration_number\":\"155\",\"car_type\":\"skoda\","
             + "\"number_of_passengers\":\"4\"}";
 
     static String MotorcycletoJSON1 = "{\"vehicle_id\":\"13\",\"registration_number\":\"1223\"}";

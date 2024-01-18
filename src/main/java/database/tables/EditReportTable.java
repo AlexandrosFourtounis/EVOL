@@ -91,13 +91,12 @@ public class EditReportTable {
 
         String query = "CREATE TABLE Report "
                 + "(report_id INTEGER not null unique, "
-                + "    malfunction_description VARCHAR(100), "
-                + "    report_date DATE,"
-                + "    insurance_paid BOOLEAN, "
-                + "    repair_cost DOUBLE, "
-                + " FOREIGN KEY(customer_id) REFERENCES Customer(customer_id), "
-                + " FOREIGN KEY(vehicle_id) REFERENCES Vehicle(vehicle_id), "
-                + " PRIMARY KEY(report_id)";
+                + " malfunction_description VARCHAR(100), "
+                + " report_date DATE,"
+                + " insurance_paid BOOLEAN, "
+                + " repair_cost DOUBLE, "
+                + " PRIMARY KEY(report_id))";
+
         stmt.execute(query);
         stmt.close();
     }

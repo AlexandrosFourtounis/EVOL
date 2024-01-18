@@ -166,9 +166,12 @@ public class EditElectricScooterTable {
         Connection con = DB_Connection.getConnection();
         Statement stmt = con.createStatement();
 
-        String query = "CREATE TABLE Electric Scooter "
-                + "(Vehicle_id INTEGER not null, "
-                + "    special_number INTEGER not null unique,";
+         String query = "CREATE TABLE Electric_Scooter "
+                 + "("
+                 + "special_number INTEGER not null unique,"
+                 + "vehicle_id INTEGER not null, "
+                 + "PRIMARY KEY (special_number), "
+                 +"FOREIGN KEY (vehicle_id) REFERENCES Vehicle(vehicle_id))";
         stmt.execute(query);
         stmt.close();
     }
@@ -221,10 +224,10 @@ public class EditElectricScooterTable {
             Statement stmt = con.createStatement();
 
             String insertQuery = "INSERT INTO "
-                    + " ElectricScooter (Vehicle_id,Special_number)"
+                    + " Electric_Scooter (Vehicle_id,Special_number)"
                     + " VALUES ("
                     + "'" + ElectricScooter.getVehicle_id() + "',"
-                    + "'" + ElectricScooter.getSpecial_number() + "',"
+                    + "'" + ElectricScooter.getSpecial_number() + "'"
                     + ")";
             //stmt.execute(table);
             System.out.println(insertQuery);

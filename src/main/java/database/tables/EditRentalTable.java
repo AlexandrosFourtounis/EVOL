@@ -92,16 +92,16 @@ public class EditRentalTable {
 
         String query = "CREATE TABLE Rental "
                 + "(rental_id INTEGER not null, "
-                + "    customer_id INTEGER not null"
-                + "    vehicle_id INTEGER not null,	"
-                + "    first_name VARCHAR(20) not null,"
-                + "    last_name VARCHAR(20) not null,"
-                + "    rental_date DATE,"
-                + "    duration TIME,"
+                + "    customer_id INTEGER not null, "
+                + "    vehicle_id INTEGER not null, "
+                + "    first_name VARCHAR(20) not null, "
+                + "    last_name VARCHAR(20) not null, "
+                + "    rental_date DATE, "
+                + "    duration INTEGER, "
                 + "    cost INTEGER,"
-                + " FOREIGN KEY(customer_id) REFERENCES Customer(customer_id), "
-                + " FOREIGN KEY(vehicle_id) REFERENCES Vehicle(vehicle_id), "
-                + " PRIMARY KEY(rental_id)";
+                //                + " FOREIGN KEY(customer_id) REFERENCES Customer(customer_id), "
+                //                + " FOREIGN KEY(vehicle_id) REFERENCES Vehicle(vehicle_id), "
+                + " PRIMARY KEY(rental_id))";
         stmt.execute(query);
         stmt.close();
     }

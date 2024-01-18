@@ -11,11 +11,10 @@ package mainClasses;
  */
 public class ElectricScooter extends Vehicle {
 
-    int vehicle_id;
     int special_number;
 
     public int getVehicle_id() {
-        return vehicle_id;
+        return super.vehicle_id;
     }
 
     public void setVehicle_id(int vehicle_id) {

@@ -11,7 +11,6 @@ package mainClasses;
  */
 public class Car extends Vehicle {
 
-    int vehicle_id;
     int registration_number, number_of_passengers;
     String type;
 

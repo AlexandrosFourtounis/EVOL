@@ -34,7 +34,7 @@ public class InitDatabase {
     public void dropDatabase() throws SQLException, ClassNotFoundException {
         Connection conn = getInitialConnection();
         Statement stmt = conn.createStatement();
-        String sql = "DROP DATABASE HY360_2022";
+        String sql = "DROP DATABASE HY360_2024";
         stmt.executeUpdate(sql);
         System.out.println("Database dropped successfully...");
     }
@@ -42,29 +42,30 @@ public class InitDatabase {
     public void initDatabase() throws SQLException, ClassNotFoundException {
         Connection conn = getInitialConnection();
         Statement stmt = conn.createStatement();
-        stmt.execute("CREATE DATABASE HY360_2022");
+        stmt.execute("CREATE DATABASE HY360_2024");
         stmt.close();
         conn.close();
     }
 
     public void initTables() throws SQLException, ClassNotFoundException {
-        EditCarTable eut = new EditCarTable();
-        eut.createcarTable();
-
-        EditCustomerTable cus = new EditCustomerTable();
-        cus.createCustomerTable();
 
         EditRegistrationTable ert = new EditRegistrationTable();
         ert.createRegistrationTable();
 
-        EditRentalTable ren = new EditRentalTable();
-        ren.createRentalTable();
+        EditCustomerTable cus = new EditCustomerTable();
+        cus.createCustomerTable();
+
+        EditVehicleTable veh = new EditVehicleTable();
+        veh.createVehiclesTable();
 
         EditReportTable rep = new EditReportTable();
         rep.createReportTable();
 
-        EditVehicleTable veh = new EditVehicleTable();
-        veh.createVehiclesTable();
+        EditRentalTable ren = new EditRentalTable();
+        ren.createRentalTable();
+
+        EditCarTable eut = new EditCarTable();
+        eut.createcarTable();
 
         EditMotorcycleTable mot = new EditMotorcycleTable();
         mot.createMotorcyclesTable();
@@ -121,26 +122,26 @@ public class InitDatabase {
         vhe.addVehicleFromJSON(Resources.vehicle4);
         vhe.addVehicleFromJSON(Resources.vehicle5);
 
-        EditMotorcycleTable motr = new EditMotorcycleTable();
-        motr.addMotorcycleFromJSON(Resources.MotorcycletoJSON1);
-        motr.addMotorcycleFromJSON(Resources.MotorcycletoJSON2);
-        motr.addMotorcycleFromJSON(Resources.MotorcycletoJSON3);
-        motr.addMotorcycleFromJSON(Resources.MotorcycletoJSON4);
-        motr.addMotorcycleFromJSON(Resources.MotorcycletoJSON5);
+//        EditMotorcycleTable motr = new EditMotorcycleTable();
+//        motr.addMotorcycleFromJSON(Resources.MotorcycletoJSON1);
+//        motr.addMotorcycleFromJSON(Resources.MotorcycletoJSON2);
+//        motr.addMotorcycleFromJSON(Resources.MotorcycletoJSON3);
+//        motr.addMotorcycleFromJSON(Resources.MotorcycletoJSON4);
+//        motr.addMotorcycleFromJSON(Resources.MotorcycletoJSON5);
 
-        EditBicycleTable bicy = new EditBicycleTable();
-        bicy.addBicycleFromJSON(Resources.Bicycle1);
-        bicy.addBicycleFromJSON(Resources.Bicycle2);
-        bicy.addBicycleFromJSON(Resources.Bicycle3);
-        bicy.addBicycleFromJSON(Resources.Bicycle4);
-        bicy.addBicycleFromJSON(Resources.Bicycle5);
-
-        EditElectricScooterTable elec = new EditElectricScooterTable();
-        elec.addElectricScooterFromJSON(Resources.ElectricScooter1);
-        elec.addElectricScooterFromJSON(Resources.ElectricScooter2);
-        elec.addElectricScooterFromJSON(Resources.ElectricScooter3);
-        elec.addElectricScooterFromJSON(Resources.ElectricScooter4);
-        elec.addElectricScooterFromJSON(Resources.ElectricScooter5);
+//        EditBicycleTable bicy = new EditBicycleTable();
+//        bicy.addBicycleFromJSON(Resources.Bicycle1);
+//        bicy.addBicycleFromJSON(Resources.Bicycle2);
+//        bicy.addBicycleFromJSON(Resources.Bicycle3);
+//        bicy.addBicycleFromJSON(Resources.Bicycle4);
+//        bicy.addBicycleFromJSON(Resources.Bicycle5);
+//
+//        EditElectricScooterTable elec = new EditElectricScooterTable();
+//        elec.addElectricScooterFromJSON(Resources.ElectricScooter1);
+//        elec.addElectricScooterFromJSON(Resources.ElectricScooter2);
+//        elec.addElectricScooterFromJSON(Resources.ElectricScooter3);
+//        elec.addElectricScooterFromJSON(Resources.ElectricScooter4);
+//        elec.addElectricScooterFromJSON(Resources.ElectricScooter5);
     }
 
     /*
