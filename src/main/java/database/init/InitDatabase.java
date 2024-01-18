@@ -80,18 +80,18 @@ public class InitDatabase {
         //Users
 
         EditCarTable eut = new EditCarTable();
-        eut.addcarFromJSON(Resources.petOwnerJSON);
-        eut.addcarFromJSON(Resources.petOwner2JSON);
-        eut.addcarFromJSON(Resources.petOwner3JSON);
-        eut.addcarFromJSON(Resources.petOwner4JSON);
+        eut.addcarFromJSON(Resources.CartoJSON1);
+        eut.addcarFromJSON(Resources.CartoJSON2);
+        eut.addcarFromJSON(Resources.CartoJSON3);
+        eut.addcarFromJSON(Resources.CartoJSON4);
+        eut.addcarFromJSON(Resources.CartoJSON5);
 
         EditCustomerTable editc = new EditCustomerTable();
-        editc.addCustomerFromJSON(Resources.petKeeper1);
-        editc.addCustomerFromJSON(Resources.petKeeper2);
-        editc.addCustomerFromJSON(Resources.petKeeper3);
-        editc.addCustomerFromJSON(Resources.petKeeper4);
-        editc.addCustomerFromJSON(Resources.petKeeper5);
-        editc.addCustomerFromJSON(Resources.petKeeper6);
+        editc.addCustomerFromJSON(Resources.CustomertoJSON1);
+        editc.addCustomerFromJSON(Resources.CustomertoJSON2);
+        editc.addCustomerFromJSON(Resources.CustomertoJSON3);
+        editc.addCustomerFromJSON(Resources.CustomertoJSON4);
+        editc.addCustomerFromJSON(Resources.CustomertoJSON5);
 
         EditRegistrationTable ebt = new EditRegistrationTable();
         ebt.addRegistrationFromJSON(Resources.registration1);
@@ -108,17 +108,39 @@ public class InitDatabase {
         ren.addRentalFromJSON(Resources.rental5);
 
         EditReportTable rep = new EditReportTable();
-        rep.addReportFromJSON(Resources.message1);
-        rep.addReportFromJSON(Resources.message2);
+        rep.addReportFromJSON(Resources.Report1);
+        rep.addReportFromJSON(Resources.Report2);
+        rep.addReportFromJSON(Resources.Report3);
+        rep.addReportFromJSON(Resources.Report4);
+        rep.addReportFromJSON(Resources.Report5);
 
         EditVehicleTable vhe = new EditVehicleTable();
-        vhe.addVehicleFromJSON(Resources.review1);
+        vhe.addVehicleFromJSON(Resources.vehicle1);
+        vhe.addVehicleFromJSON(Resources.vehicle2);
+        vhe.addVehicleFromJSON(Resources.vehicle3);
+        vhe.addVehicleFromJSON(Resources.vehicle4);
+        vhe.addVehicleFromJSON(Resources.vehicle5);
 
         EditMotorcycleTable motr = new EditMotorcycleTable();
-        motr.addMotorcycleFromJSON(Resources.review1);
+        motr.addMotorcycleFromJSON(Resources.MotorcycletoJSON1);
+        motr.addMotorcycleFromJSON(Resources.MotorcycletoJSON2);
+        motr.addMotorcycleFromJSON(Resources.MotorcycletoJSON3);
+        motr.addMotorcycleFromJSON(Resources.MotorcycletoJSON4);
+        motr.addMotorcycleFromJSON(Resources.MotorcycletoJSON5);
 
         EditBicycleTable bicy = new EditBicycleTable();
-        bicy.addBicycleFromJSON(Resources.review1);
+        bicy.addBicycleFromJSON(Resources.Bicycle1);
+        bicy.addBicycleFromJSON(Resources.Bicycle2);
+        bicy.addBicycleFromJSON(Resources.Bicycle3);
+        bicy.addBicycleFromJSON(Resources.Bicycle4);
+        bicy.addBicycleFromJSON(Resources.Bicycle5);
+
+        EditElectricScooterTable elec = new EditElectricScooterTable();
+        elec.addElectricScooterFromJSON(Resources.ElectricScooter1);
+        elec.addElectricScooterFromJSON(Resources.ElectricScooter2);
+        elec.addElectricScooterFromJSON(Resources.ElectricScooter3);
+        elec.addElectricScooterFromJSON(Resources.ElectricScooter4);
+        elec.addElectricScooterFromJSON(Resources.ElectricScooter5);
     }
 
     /*
