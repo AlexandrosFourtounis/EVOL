@@ -6,13 +6,12 @@
 package database.tables;
 
 import com.google.gson.Gson;
-import mainClasses.car;
+import mainClasses.Car;
 import database.DB_Connection;
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
-import java.util.ArrayList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -20,25 +19,25 @@ import java.util.logging.Logger;
  *
  * @author Mike
  */
-public class EditcarTable {
+public class EditCarTable {
 
  
     public void addcarFromJSON(String json) throws ClassNotFoundException{
-         car car=jsonTocar(json);
+        Car car = jsonTocar(json);
          addNewcar(car);
     }
     
-    public car jsonTocar(String json){
+    public Car jsonTocar(String json) {
          Gson gson = new Gson();
 
-        car car = gson.fromJson(json, car.class);
+        Car car = gson.fromJson(json, Car.class);
         return car;
     }
     
-    public String carToJSON(car car){
+    public String carToJSON(Car car) {
          Gson gson = new Gson();
 
-        String json = gson.toJson(car, car.class);
+        String json = gson.toJson(car, Car.class);
         return json;
     }
     
@@ -218,7 +217,7 @@ public class EditcarTable {
      *
      * @throws ClassNotFoundException
      */
-    public void addNewcar(car car) throws ClassNotFoundException {
+    public void addNewcar(Car car) throws ClassNotFoundException {
         try {
             Connection con = DB_Connection.getConnection();
 
@@ -227,10 +226,10 @@ public class EditcarTable {
             String insertQuery = "INSERT INTO "
                     + " car (car_id,color,brand,autonomy,daily_rental_cost,daily_insurance_cost,available)"
                     + " VALUES ("
-                    + "'" + car.getcar_id() + "',"
-                    + "'" + car.registration_number() + "',"
-                    + "'" + car.car_type() + "',"
-                    + "'" + car.number_of_passengers() + "',"
+                    + "'" + car.getVehicle_id() + "',"
+                    + "'" + car.getRegistration_number() + "',"
+                    + "'" + car.getType() + "',"
+                    + "'" + car.getNumber_of_passengers() + "',"
                     + ")";
             //stmt.execute(table);
             System.out.println(insertQuery);
@@ -241,7 +240,7 @@ public class EditcarTable {
             stmt.close();
 
         } catch (SQLException ex) {
-            Logger.getLogger(EditcarsTable.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(EditCarTable.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
 
