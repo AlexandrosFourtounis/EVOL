@@ -11,33 +11,64 @@ package database.init;
  */
 public class Resources {
 
-    static String petOwnerJSON = "{\"username\":\"mountanton\",\"email\":\"mike@csd.uoc.gr\",\"password\":\"ab$12345\","
-            + "\"firstname\":\"Michalis\",\"lastname\":\"Mountanton\",\"birthdate\":\"1992-06-03\",\"gender\":\"Male\","
-            + "\"country\":\"Greece\",\"city\":\"Heraklion\",\"address\":\"CSD Voutes\",\"lat\":\"35.3053121\","
-            + "\"lon\":\"25.0722869\",\"telephone\":\"1234567890\","
-            + "\"job\":\"Researcher\","
-            + "\"personalpage\":\"www.mountanton.gr\"}";
+    static String CustomertoJSON1 = "{\"customer_id\":\"1\",\"registration_id\":\"11\",\"firstname\":\"alexandros\","
+            + "\"lastname\":\"fourtounis\",\"street\":\"theodoulou18\",\"date_of_birth\":\"2003\",\"drivers_licence_number\":\"123456789\","
+            + "\"credit_card_number\":\"5556669990\",\"expiration_date\":\"19of26\",\"security_code\":\"486\",\"city\":\"Heraklio\","
+            + "\"region\":\"Heraklion\",\"zip_code\":\"71305\","
+            + "\"age\":\"18\","
+            + "\"drivers\":\"Alex,George\"}";
 
-    static String petOwner2JSON = "{\"username\":\"tsitsip\",\"email\":\"tsitsipas@tuc.gr\",\"password\":\"ab$12345\","
-            + "\"firstname\":\"Stefanos\",\"lastname\":\"Tsitsipas\",\"birthdate\":\"1998-08-12\",\"gender\":\"Male\","
-            + "\"country\":\"Greece\",\"city\":\"Heraklion\",\"address\":\"Dimokratias 99\",\"lat\":\"35.3401097\","
-            + "\"lon\":\"25.1562301\",\"telephone\":\"6977777777\","
-            + "\"job\":\"Twitter/Tennis\","
-            + "\"personalpage\":\"www.tsitsipas.gr\"}";
+    static String CustomertoJSON2 = "{\"customer_id\":\"2\",\"registration_id\":\"22\",\"firstname\":\"yannis\","
+            + "\"lastname\":\"mpakas\",\"street\":\"nauarinou\",\"date_of_birth\":\"2005\",\"drivers_licence_number\":\"123686789\","
+            + "\"credit_card_number\":\"4446669990\",\"expiration_date\":\"18of26\",\"security_code\":\"476\",\"city\":\"Thessaloniki\","
+            + "\"region\":\"Thessaloniki\",\"zip_code\":\"60100\","
+            + "\"age\":\"20\","
+            + "\"drivers\":\"Yannis\"}";
 
-    static String petOwner3JSON = "{\"username\":\"papadaki\",\"email\":\"papadaki@hmu.gr\",\"password\":\"ab$54321\","
-            + "\"firstname\":\"Eleni\",\"lastname\":\"Papadaki\",\"birthdate\":\"2002-10-10\",\"gender\":\"Female\","
-            + "\"country\":\"Greece\",\"city\":\"Heraklion\",\"address\":\"Evans 25\",\"lat\":\"35.3370384\","
-            + "\"lon\":\"25.1340107\",\"telephone\":\"2811111111\","
-            + "\"job\":\"Influencer\","
-            + "\"personalpage\":\"www.papadakiH.gr\"}";
+    static String CustomertoJSON3 = "{\"customer_id\":\"3\",\"registration_id\":\"33\",\"firstname\":\"mpampis\","
+            + "\"lastname\":\"mpampinos\",\"street\":\"plastira2\",\"date_of_birth\":\"2000\",\"drivers_licence_number\":\"1222256789\","
+            + "\"credit_card_number\":\"5556669222\",\"expiration_date\":\"19of26\",\"security_code\":\"222\",\"city\":\"Athens\","
+            + "\"region\":\"Pireas\",\"zip_code\":\"1002\","
+            + "\"age\":\"21\","
+            + "\"drivers\":\"Mpampis\"}";
 
-    static String petOwner4JSON = "{\"username\":\"dish_bar\",\"email\":\"dish@hotmail.com\",\"password\":\"ab$54321\","
-            + "\"firstname\":\"Dish\",\"lastname\":\"Bar\",\"birthdate\":\"1998-05-02\",\"gender\":\"Female\","
-            + "\"country\":\"Greece\",\"city\":\"Heraklion\",\"address\":\"Papagiamali 10\",\"lat\":\"35.340312\","
-            + "\"lon\":\"25.133874\",\"telephone\":\"2810223344\","
-            + "\"job\":\"BarWoman\","
-            + "\"personalpage\":\"www.barwoman.gr\"}";
+    static String CustomertoJSON4 = "{\"customer_id\":\"4\",\"registration_id\":\"44\",\"firstname\":\"nikos\","
+            + "\"lastname\":\"nikolaidis\",\"street\":\"theodoulou18\",\"date_of_birth\":\"2003\",\"drivers_licence_number\":\"123426789\","
+            + "\"credit_card_number\":\"5556669992\",\"expiration_date\":\"19of26\",\"security_code\":\"486\",\"city\":\"Heraklio\","
+            + "\"region\":\"Heraklion\",\"zip_code\":\"71305\","
+            + "\"age\":\"25\","
+            + "\"drivers\":\"Alex\"}";
+    static String CustomertoJSON5 = "{\"customer_id\":\"5\",\"registration_id\":\"55\",\"firstname\":\"niskos\","
+            + "\"lastname\":\"nikolaidis\",\"street\":\"theodoulou18\",\"date_of_birth\":\"2003\",\"drivers_licence_number\":\"123426789\","
+            + "\"credit_card_number\":\"5556669988\",\"expiration_date\":\"19of26\",\"security_code\":\"486\",\"city\":\"Heraklio\","
+            + "\"region\":\"Heraklion\",\"zip_code\":\"71305\","
+            + "\"age\":\"25\","
+            + "\"drivers\":\"niskos\"}";
+
+    static String CartoJSON1 = "{\"vehicle_id\":\"1\",\"registration_number\":\"123\",\"car_type\":\"porshe\","
+            + "\"number_of_passengers\":\"4\"}";
+
+    static String CartoJSON2 = "{\"vehicle_id\":\"2\",\"registration_number\":\"1232\",\"car_type\":\"fiat panda\","
+            + "\"number_of_passengers\":\"2\"}";
+
+    static String CartoJSON3 = "{\"vehicle_id\":\"3\",\"registration_number\":\"1323\",\"car_type\":\"mercedes\","
+            + "\"number_of_passengers\":\"4\"}";
+
+    static String CartoJSON4 = "{\"vehicle_id\":\"4\",\"registration_number\":\"4123\",\"car_type\":\"lambo\","
+            + "\"number_of_passengers\":\"2\"}";
+
+    static String CartoJSON5 = "{\"vehicle_id\":\"5\",\"registration_number\":\"12355\",\"car_type\":\"skoda\","
+            + "\"number_of_passengers\":\"4\"}";
+
+    static String MotorcycletoJSON1 = "{\"vehicle_id\":\"13\",\"registration_number\":\"1223\"}";
+
+    static String MotorcycletoJSON2 = "{\"vehicle_id\":\"53\",\"registration_number\":\"222\"}";
+
+    static String MotorcycletoJSON3 = "{\"vehicle_id\":\"93\",\"registration_number\":\"12223\"}";
+
+    static String MotorcycletoJSON4 = "{\"vehicle_id\":\"33\",\"registration_number\":\"12238\"}";
+
+    static String MotorcycletoJSON5 = "{\"vehicle_id\":\"43\",\"registration_number\":\"12239\"}";
 
     static String petKeeper1 = "{\"username\":\"mitsos\",\"email\":\"mitsos@gmail.com\",\"password\":\"ab$111111\","
             + "\"firstname\":\"Dimitris\",\"lastname\":\"Papadopoulos\",\"birthdate\":\"1995-12-11\",\"gender\":\"Male\","
