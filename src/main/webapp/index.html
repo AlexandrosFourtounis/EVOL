@@ -1,10 +1,44 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <title>Start Page</title>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<!doctype html>
+<html lang="en" class="no-js">
+    <head> 
+        <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+        <script src="js/ajax.js" defer></script>
+        <link rel="stylesheet" href="css/cssExamples.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+
     </head>
     <body>
-        <h1>Hello World!</h1>
+        <h2>HY 360-Database</h2> 
+
+
+        <div class="row">
+
+
+            <div class="column column1Width" id="choices" style="background-color:#ADD8E6;">           
+
+                <button  class="button" onclick="initDB()">Initialize Database</button><!-- comment -->
+                <button  class="button" onclick="deleteDB()">Delete Database</button><!-- comment -->
+                <br><br>
+                See the account of a pet keeper <br><br>
+                <form id="loginForm" name="loginForm" onsubmit='getUser();return false;'>
+                    <label for="username">username:</label><br>
+                    <input type="text"  id="username" name="username" required><br>
+                    <label for="password">password:</label><br>
+                    <input type="password"  name="password" id="password" required><br>
+                    <input type="submit" class="button" value="Login">
+                </form>
+            </div>
+            <div class="column column2Width" id="output" style="background-color:#fffff0;">
+                <h2>Output</h2>
+                <div id="ajaxContent"></div>
+
+            </div>
+
+        </div>
+        <br>
+
     </body>
+
 </html>
+
