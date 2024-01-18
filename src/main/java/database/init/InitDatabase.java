@@ -5,25 +5,12 @@
  */
 package database.init;
 
-import com.google.gson.Gson;
-import com.google.gson.JsonArray;
-import database.tables.EditPetsTable;
 import static database.DB_Connection.getInitialConnection;
-import database.tables.EditCustomerTable;
-import database.tables.EditMessagesTable;
+import database.tables.*;
 
-import database.tables.EditPetOwnersTable;
-import database.tables.EditPetKeepersTable;
-import database.tables.EditReviewsTable;
 import java.sql.Connection;
 import java.sql.SQLException;
 import java.sql.Statement;
-import java.util.ArrayList;
-//import mainClasses.Message;
-//import mainClasses.Pet;
-//import mainClasses.PetKeeper;
-//import mainClasses.PetOwner;
-//import mainClasses.Review;
 
 
 /*
@@ -37,8 +24,8 @@ public class InitDatabase {
         init.initDatabase();
         init.initTables();
         init.addToDatabaseExamples();
-        init.updateRecords();
-        init.databaseToJSON();
+        //init.updateRecords();
+        //init.databaseToJSON();
 
         //  init.dropDatabase();
         // init.deleteRecords();
@@ -61,61 +48,77 @@ public class InitDatabase {
     }
 
     public void initTables() throws SQLException, ClassNotFoundException {
-        EditPetOwnersTable eut = new EditPetOwnersTable();
-        eut.createPetOwnersTable();
+        EditCarTable eut = new EditCarTable();
+        eut.createcarTable();
 
-        EditPetKeepersTable editkeepers = new EditPetKeepersTable();
-        editkeepers.createPetKeepersTable();
+        EditCustomerTable cus = new EditCustomerTable();
+        cus.createCustomerTable();
 
-        EditPetsTable editpets = new EditPetsTable();
-        editpets.createPetsTable();
+        EditRegistrationTable ert = new EditRegistrationTable();
+        ert.createRegistrationTable();
 
-        EditCustomerTable editBookings = new EditCustomerTable();
-        editBookings.createBookingTable();
+        EditRentalTable ren = new EditRentalTable();
+        ren.createRentalTable();
 
-        EditReviewsTable editRevs = new EditReviewsTable();
-        editRevs.createReviewTable();
+        EditReportTable rep = new EditReportTable();
+        rep.createReportTable();
 
-        EditMessagesTable editMsgs = new EditMessagesTable();
-        editMsgs.createMessageTable();
+        EditVehicleTable veh = new EditVehicleTable();
+        veh.createVehiclesTable();
+
+        EditMotorcycleTable mot = new EditMotorcycleTable();
+        mot.createMotorcyclesTable();
+
+        EditElectricScooterTable elc = new EditElectricScooterTable();
+        elc.createElectricScooterTable();
+
+        EditBicycleTable bic = new EditBicycleTable();
+        bic.createBicycleTable();
     }
 
     public void addToDatabaseExamples() throws ClassNotFoundException, SQLException {
         //Users
 
-        EditPetOwnersTable eut = new EditPetOwnersTable();
-        eut.addPetOwnerFromJSON(Resources.petOwnerJSON);
-        eut.addPetOwnerFromJSON(Resources.petOwner2JSON);
-        eut.addPetOwnerFromJSON(Resources.petOwner3JSON);
-        eut.addPetOwnerFromJSON(Resources.petOwner4JSON);
+        EditCarTable eut = new EditCarTable();
+        eut.addcarFromJSON(Resources.petOwnerJSON);
+        eut.addcarFromJSON(Resources.petOwner2JSON);
+        eut.addcarFromJSON(Resources.petOwner3JSON);
+        eut.addcarFromJSON(Resources.petOwner4JSON);
 
-        EditPetKeepersTable editKeepers = new EditPetKeepersTable();
-        editKeepers.addPetKeeperFromJSON(Resources.petKeeper1);
-        editKeepers.addPetKeeperFromJSON(Resources.petKeeper2);
-        editKeepers.addPetKeeperFromJSON(Resources.petKeeper3);
-        editKeepers.addPetKeeperFromJSON(Resources.petKeeper4);
-        editKeepers.addPetKeeperFromJSON(Resources.petKeeper5);
-        editKeepers.addPetKeeperFromJSON(Resources.petKeeper6);
+        EditCustomerTable editc = new EditCustomerTable();
+        editc.addCustomerFromJSON(Resources.petKeeper1);
+        editc.addCustomerFromJSON(Resources.petKeeper2);
+        editc.addCustomerFromJSON(Resources.petKeeper3);
+        editc.addCustomerFromJSON(Resources.petKeeper4);
+        editc.addCustomerFromJSON(Resources.petKeeper5);
+        editc.addCustomerFromJSON(Resources.petKeeper6);
 
-        EditPetsTable ebt = new EditPetsTable();
-        ebt.addPetFromJSON(Resources.pet1);
-        ebt.addPetFromJSON(Resources.pet2);
-        ebt.addPetFromJSON(Resources.pet3);
-        ebt.addPetFromJSON(Resources.pet4);
+        EditRegistrationTable ebt = new EditRegistrationTable();
+        ebt.addRegistrationFromJSON(Resources.pet1);
+        ebt.addRegistrationFromJSON(Resources.pet2);
+        ebt.addRegistrationFromJSON(Resources.pet3);
+        ebt.addRegistrationFromJSON(Resources.pet4);
 
-        EditCustomerTable editbookings = new EditCustomerTable();
-        editbookings.addBookingFromJSON(Resources.booking1);
-        editbookings.addBookingFromJSON(Resources.booking2);
-        editbookings.addBookingFromJSON(Resources.booking3);
+        EditRentalTable ren = new EditRentalTable();
+        ren.addRentalFromJSON(Resources.booking1);
+        ren.addRentalFromJSON(Resources.booking2);
+        ren.addRentalFromJSON(Resources.booking3);
 
-        EditMessagesTable editmessages = new EditMessagesTable();
-        editmessages.addMessageFromJSON(Resources.message1);
-        editmessages.addMessageFromJSON(Resources.message2);
+        EditReportTable rep = new EditReportTable();
+        rep.addReportFromJSON(Resources.message1);
+        rep.addReportFromJSON(Resources.message2);
 
-        EditReviewsTable editRevs = new EditReviewsTable();
-        editRevs.addReviewFromJSON(Resources.review1);
+        EditVehicleTable vhe = new EditVehicleTable();
+        vhe.addVehicleFromJSON(Resources.review1);
+
+        EditMotorcycleTable motr = new EditMotorcycleTable();
+        motr.addMotorcycleFromJSON(Resources.review1);
+
+        EditBicycleTable bicy = new EditBicycleTable();
+        bicy.addBicycleFromJSON(Resources.review1);
     }
 
+    /*
     public void databaseToJSON() throws ClassNotFoundException, SQLException {
 //       //Get info of Pet Owner
         EditPetOwnersTable eut = new EditPetOwnersTable();
@@ -206,4 +209,5 @@ public class InitDatabase {
         //   eb.deletePet(pet_id);
     }
 
+} */
 }

@@ -6,7 +6,7 @@
 package database.tables;
 
 import com.google.gson.Gson;
-import mainClasses.Motorcycle;
+import mainClasses.ElectricScooter;
 import database.DB_Connection;
 import java.sql.Connection;
 import java.sql.ResultSet;
@@ -17,45 +17,45 @@ import java.util.logging.Logger;
 
 /**
  *
- * @author Alexandros_Fourtounis
+ * @author Mike
  */
-public class EditMotorcycleTable {
+public class EditElectricScooterTable {
 
  
-    public void addMotorcycleFromJSON(String json) throws ClassNotFoundException{
-         Motorcycle Motorcycle=jsonToMotorcycle(json);
-         addNewMotorcycle(Motorcycle);
+    public void addElectricScooterFromJSON(String json) throws ClassNotFoundException{
+        ElectricScooter ElectricScooter = jsonToElectricScooter(json);
+         addNewElectricScooter(ElectricScooter);
     }
     
-    public Motorcycle jsonToMotorcycle(String json){
+    public ElectricScooter jsonToElectricScooter(String json) {
          Gson gson = new Gson();
 
-        Motorcycle Motorcycle = gson.fromJson(json, Motorcycle.class);
-        return Motorcycle;
+        ElectricScooter ElectricScooter = gson.fromJson(json, ElectricScooter.class);
+        return ElectricScooter;
     }
     
-    public String MotorcycleToJSON(Motorcycle Motorcycle){
+    public String ElectricScooterToJSON(ElectricScooter ElectricScooter) {
          Gson gson = new Gson();
 
-        String json = gson.toJson(Motorcycle, Motorcycle.class);
+        String json = gson.toJson(ElectricScooter, ElectricScooter.class);
         return json;
     }
     
    
-    /*public void updateMotorcycle(String Motorcyclename,String personalpage) throws SQLException, ClassNotFoundException{
+    /*public void updateElectricScooter(String ElectricScootername,String personalpage) throws SQLException, ClassNotFoundException{
         Connection con = DB_Connection.getConnection();
         Statement stmt = con.createStatement();
-        String update="UPDATE Motorcycles SET personalpage='"+personalpage+"' WHERE Motorcyclename = '"+Motorcyclename+"'";
+        String update="UPDATE ElectricScooters SET personalpage='"+personalpage+"' WHERE ElectricScootername = '"+ElectricScootername+"'";
         stmt.executeUpdate(update);
     }*/
     
-    /*public void printMotorcycleDetails(String Motorcyclename, String password) throws SQLException, ClassNotFoundException{
+    /*public void printElectricScooterDetails(String ElectricScootername, String password) throws SQLException, ClassNotFoundException{
          Connection con = DB_Connection.getConnection();
         Statement stmt = con.createStatement();
 
         ResultSet rs;
         try {
-            rs = stmt.executeQuery("SELECT * FROM Motorcycle WHERE Motorcyclename = '" + Motorcyclename + "' AND password='"+password+"'");
+            rs = stmt.executeQuery("SELECT * FROM ElectricScooter WHERE ElectricScootername = '" + ElectricScootername + "' AND password='"+password+"'");
             while (rs.next()) {
                 System.out.println("===Result===");
                 DB_Connection.printResults(rs);
@@ -67,18 +67,18 @@ public class EditMotorcycleTable {
         }
     }*/
     
-    /*public Motorcycle databaseToMotorcycles(String Motorcyclename, String password) throws SQLException, ClassNotFoundException{
+    /*public ElectricScooter databaseToElectricScooters(String ElectricScootername, String password) throws SQLException, ClassNotFoundException{
          Connection con = DB_Connection.getConnection();
         Statement stmt = con.createStatement();
 
         ResultSet rs;
         try {
-            rs = stmt.executeQuery("SELECT * FROM Motorcycles WHERE Motorcyclename = '" + Motorcyclename + "' AND password='"+password+"'");
+            rs = stmt.executeQuery("SELECT * FROM ElectricScooters WHERE ElectricScootername = '" + ElectricScootername + "' AND password='"+password+"'");
             rs.next();
             String json=DB_Connection.getResultsToJSON(rs);
             Gson gson = new Gson();
-            Motorcycle Motorcycle = gson.fromJson(json, Motorcycle.class);
-            return Motorcycle;
+            ElectricScooter ElectricScooter = gson.fromJson(json, ElectricScooter.class);
+            return ElectricScooter;
         } catch (Exception e) {
             System.err.println("Got an exception! ");
             System.err.println(e.getMessage());
@@ -86,28 +86,28 @@ public class EditMotorcycleTable {
         return null;
     }*/
     
-    /* public ArrayList<Motorcycle> getAvailableKeepers(String type) throws SQLException, ClassNotFoundException {
+    /* public ArrayList<ElectricScooter> getAvailableKeepers(String type) throws SQLException, ClassNotFoundException {
         Connection con = DB_Connection.getConnection();
         Statement stmt = con.createStatement();
-        ArrayList<Motorcycle> keepers = new ArrayList<Motorcycle>();
+        ArrayList<ElectricScooter> keepers = new ArrayList<ElectricScooter>();
         ResultSet rs = null;
         try {
             //if(type=="catkeeper")
             if("all".equals(type))     
-            rs = stmt.executeQuery("SELECT * FROM `Motorcycles` WHERE  `Motorcycles`.`keeper_id` not in (select keeper_id "
+            rs = stmt.executeQuery("SELECT * FROM `ElectricScooters` WHERE  `ElectricScooters`.`keeper_id` not in (select keeper_id "
                  + "from `bookings` where `status`='requested' or  `status`='accepted')\n" +"");
             else if ("catKeepers".equals(type))
-                 rs = stmt.executeQuery("SELECT * FROM `Motorcycles` WHERE `Motorcycles`.`catkeeper`='true' AND `Motorcycles`.`keeper_id` not in (select keeper_id "
+                 rs = stmt.executeQuery("SELECT * FROM `ElectricScooters` WHERE `ElectricScooters`.`catkeeper`='true' AND `ElectricScooters`.`keeper_id` not in (select keeper_id "
                  + "from `bookings` where `status`='requested' or  `status`='accepted')");         
              else if ("dogKeepers".equals(type))
-                 rs = stmt.executeQuery("SELECT * FROM `Motorcycles` WHERE `Motorcycles`.`dogkeeper`='true' AND `Motorcycles`.`keeper_id` not in (select keeper_id "
+                 rs = stmt.executeQuery("SELECT * FROM `ElectricScooters` WHERE `ElectricScooters`.`dogkeeper`='true' AND `ElectricScooters`.`keeper_id` not in (select keeper_id "
                  + "from `bookings` where `status`='requested' or  `status`='accepted')");
         
            
             while (rs.next()) {
                 String json = DB_Connection.getResultsToJSON(rs);
                 Gson gson = new Gson();
-                Motorcycle keeper = gson.fromJson(json, Motorcycle.class);
+                ElectricScooter keeper = gson.fromJson(json, ElectricScooter.class);
                 keepers.add(keeper);
             }
             return keepers;
@@ -118,22 +118,22 @@ public class EditMotorcycleTable {
         return null;
     }*/
      
-    /*public ArrayList<Motorcycle> getKeepers(String type) throws SQLException, ClassNotFoundException {
+    /*public ArrayList<ElectricScooter> getKeepers(String type) throws SQLException, ClassNotFoundException {
         Connection con = DB_Connection.getConnection();
         Statement stmt = con.createStatement();
-        ArrayList<Motorcycle> keepers = new ArrayList<Motorcycle>();
+        ArrayList<ElectricScooter> keepers = new ArrayList<ElectricScooter>();
         ResultSet rs = null;
         try {
             if("catkeeper".equals(type))
-                 rs = stmt.executeQuery("SELECT * FROM Motorcycles WHERE catkeeper= '" + "true" + "'");
+                 rs = stmt.executeQuery("SELECT * FROM ElectricScooters WHERE catkeeper= '" + "true" + "'");
             else if ("dogkeeper".equals(type))
-                  rs = stmt.executeQuery("SELECT * FROM Motorcycles WHERE dogkeeper= '" + "true" + "'");
+                  rs = stmt.executeQuery("SELECT * FROM ElectricScooters WHERE dogkeeper= '" + "true" + "'");
 
            
             while (rs.next()) {
                 String json = DB_Connection.getResultsToJSON(rs);
                 Gson gson = new Gson();
-                Motorcycle keeper = gson.fromJson(json, Motorcycle.class);
+                ElectricScooter keeper = gson.fromJson(json, ElectricScooter.class);
                 keepers.add(keeper);
             }
             return keepers;
@@ -144,13 +144,13 @@ public class EditMotorcycleTable {
         return null;
     }*/
     
-    public String databaseMotorcycleToJSON(int Motorcycle_id) throws SQLException, ClassNotFoundException{
+    public String databaseElectricScooterToJSON(int Vehicle_id) throws SQLException, ClassNotFoundException{
          Connection con = DB_Connection.getConnection();
         Statement stmt = con.createStatement();
 
         ResultSet rs;
         try {
-            rs = stmt.executeQuery("SELECT * FROM Motorcycle WHERE Motorcycle id = '" + Motorcycle_id);
+            rs = stmt.executeQuery("SELECT * FROM Electric Scooter WHERE Vehicle_id = '" + Vehicle_id);
             rs.next();
             String json=DB_Connection.getResultsToJSON(rs);
             return json;
@@ -161,36 +161,29 @@ public class EditMotorcycleTable {
         return null;
     }
 
-     public void createMotorcyclesTable() throws SQLException, ClassNotFoundException {
+     public void createElectricScooterTable() throws SQLException, ClassNotFoundException {
 
         Connection con = DB_Connection.getConnection();
         Statement stmt = con.createStatement();
 
-        String query = "CREATE TABLE Motorcycle "
-                + "(Motorcycle_id INTEGER not null unique, "
-                + "    color VARCHAR(20),"
-                + "    brand VARCHAR(20),	"
-                + "    autonomy INTEGER,"
-                + "    daily_rental_cost INTEGER,"
-                + "    daily_insurance_cost INTEGER,"
-                + "    available BOOLEAN,"
-                + "    gender  VARCHAR (7) not null,"
-                + " PRIMARY KEY (Motorcycle_id))";
+        String query = "CREATE TABLE Electric Scooter "
+                + "(Vehicle_id INTEGER not null, "
+                + "    special_number INTEGER not null unique,";
         stmt.execute(query);
         stmt.close();
     }
-    /*public Motorcycle databaseToMotorcyclesMotorcyclename(String Motorcyclename) throws SQLException, ClassNotFoundException {
+    /*public ElectricScooter databaseToElectricScootersElectricScootername(String ElectricScootername) throws SQLException, ClassNotFoundException {
         Connection con = DB_Connection.getConnection();
         Statement stmt = con.createStatement();
 
         ResultSet rs;
         try {
-            rs = stmt.executeQuery("SELECT * FROM Motorcycle WHERE Motorcyclename = '" + Motorcyclename + "'");
+            rs = stmt.executeQuery("SELECT * FROM ElectricScooter WHERE ElectricScootername = '" + ElectricScootername + "'");
             rs.next();
             String json = DB_Connection.getResultsToJSON(rs);
             Gson gson = new Gson();
-            Motorcycle Motorcycle = gson.fromJson(json, Motorcycle.class);
-            return Motorcycle;
+            ElectricScooter ElectricScooter = gson.fromJson(json, ElectricScooter.class);
+            return ElectricScooter;
         } catch (Exception e) {
             System.err.println("Got an exception! ");
             System.err.println(e.getMessage());
@@ -198,18 +191,18 @@ public class EditMotorcycleTable {
         return null;
     }*/
 
-    /*public Motorcycle databaseToMotorcyclesEmail(String email) throws SQLException, ClassNotFoundException {
+    /*public ElectricScooter databaseToElectricScootersEmail(String email) throws SQLException, ClassNotFoundException {
         Connection con = DB_Connection.getConnection();
         Statement stmt = con.createStatement();
 
         ResultSet rs;
         try {
-            rs = stmt.executeQuery("SELECT * FROM Motorcycles WHERE email = '" + email + "'");
+            rs = stmt.executeQuery("SELECT * FROM ElectricScooters WHERE email = '" + email + "'");
             rs.next();
             String json = DB_Connection.getResultsToJSON(rs);
             Gson gson = new Gson();
-            Motorcycle Motorcycle = gson.fromJson(json, Motorcycle.class);
-            return Motorcycle;
+            ElectricScooter ElectricScooter = gson.fromJson(json, ElectricScooter.class);
+            return ElectricScooter;
         } catch (Exception e) {
             System.err.println("Got an exception! ");
             System.err.println(e.getMessage());
@@ -221,33 +214,28 @@ public class EditMotorcycleTable {
      *
      * @throws ClassNotFoundException
      */
-    public void addMotorcycle(Motorcycle Motorcycle) throws ClassNotFoundException {
+    public void addNewElectricScooter(ElectricScooter ElectricScooter) throws ClassNotFoundException {
         try {
             Connection con = DB_Connection.getConnection();
 
             Statement stmt = con.createStatement();
 
             String insertQuery = "INSERT INTO "
-                    + " Motorcycle (Motorcycle_id,color,brand,autonomy,daily_rental_cost,daily_insurance_cost,available)"
+                    + " ElectricScooter (Vehicle_id,Special_number)"
                     + " VALUES ("
-                    + "'" + Motorcycle.getVehicle_id() + "',"
-                    + "'" + Motorcycle.getColor() + "',"
-                    + "'" + Motorcycle.getBrand() + "',"
-                    + "'" + Motorcycle.getAutonomy() + "',"
-                    + "'" + Motorcycle.getDaily_rental_cost() + "',"
-                    + "'" + Motorcycle.getDaily_insurance_cost() + "',"
-                    + "'" + Motorcycle.getAvailable() + "',"
+                    + "'" + ElectricScooter.getVehicle_id() + "',"
+                    + "'" + ElectricScooter.getSpecial_number() + "',"
                     + ")";
             //stmt.execute(table);
             System.out.println(insertQuery);
             stmt.executeUpdate(insertQuery);
-            System.out.println("# The Motorcycle was successfully added in the database.");
+            System.out.println("# The ElectricScooter was successfully added in the database.");
 
             /* Get the member id from the database and set it to the member */
             stmt.close();
 
         } catch (SQLException ex) {
-            Logger.getLogger(EditMotorcycleTable.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(EditElectricScooterTable.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
 
