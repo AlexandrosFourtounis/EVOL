@@ -68,8 +68,8 @@ public class InitDB extends HttpServlet {
             init.initDatabase();
             init.initTables();
             init.addToDatabaseExamples();
-            init.updateRecords();
-            init.databaseToJSON();
+            //init.updateRecords();
+            //init.databaseToJSON();
         } catch (SQLException ex) {
             response.sendError(500);
             Logger.getLogger(InitDB.class.getName()).log(Level.SEVERE, null, ex);
