@@ -34,7 +34,7 @@ public class InitDatabase {
     public void dropDatabase() throws SQLException, ClassNotFoundException {
         Connection conn = getInitialConnection();
         Statement stmt = conn.createStatement();
-        String sql = "DROP DATABASE";
+        String sql = "DROP DATABASE HY360_2022";
         stmt.executeUpdate(sql);
         System.out.println("Database dropped successfully...");
     }
@@ -42,7 +42,7 @@ public class InitDatabase {
     public void initDatabase() throws SQLException, ClassNotFoundException {
         Connection conn = getInitialConnection();
         Statement stmt = conn.createStatement();
-        stmt.execute("CREATE DATABASE");
+        stmt.execute("CREATE DATABASE HY360_2022");
         stmt.close();
         conn.close();
     }

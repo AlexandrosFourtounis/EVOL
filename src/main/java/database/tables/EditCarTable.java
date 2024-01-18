@@ -167,11 +167,11 @@ public class EditCarTable {
         Statement stmt = con.createStatement();
 
         String query = "CREATE TABLE Car "
-                + "(car_id INTEGER not null unique, "
+                + "(vehicle_id INTEGER not null unique, "
                 + "    registration_number INTEGER not null unique,"
                 + "    car_type VARCHAR(20),	"
                 + "    number_of_passengers INTEGER,"
-                + " FOREIGN KEY (car_id) REFERENCES car(car_id))";
+                 + " FOREIGN KEY (vehicle_id) REFERENCES Vehicle(vehicle_id))";
         stmt.execute(query);
         stmt.close();
     }
