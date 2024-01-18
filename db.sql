@@ -6,7 +6,7 @@ CREATE TABLE IF NOT EXISTS Registration
 (
     registration_id INTEGER not null AUTO_INCREMENT,
     customer_id INTEGER not null,
-    vehiclename VARCHAR(20) not null unique,
+    username VARCHAR(20) not null unique,
     pass VARCHAR(20) not null,
     registration_date DATE,
     PRIMARY KEY(registration_id),
