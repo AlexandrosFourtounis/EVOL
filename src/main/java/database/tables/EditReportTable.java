@@ -95,10 +95,8 @@ public class EditReportTable {
                 + " vehicle_id INTEGER not null, "
                 + " malfunction_description VARCHAR(100), "
                 + " report_date DATE,"
-                + " insurance_paid BOOLEAN, "
+                + " insurance_paid VARCHAR(20), "
                 + " repair_cost DOUBLE, "
-                //+ " FOREIGN KEY(customer_id) REFERENCES Customer(customer_id), "
-                //+ " FOREIGN KEY(vehicle_id) REFERENCES Vehicle(vehicle_id), "
                 + " PRIMARY KEY(report_id), "
                 + " FOREIGN KEY(customer_id) REFERENCES Customer(customer_id), "
                 + " FOREIGN KEY(vehicle_id) REFERENCES Vehicle(vehicle_id))";

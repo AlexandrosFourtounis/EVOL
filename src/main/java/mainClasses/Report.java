@@ -13,7 +13,7 @@ public class Report {
     int report_id, vehicle_id, customer_id;
     String malfunction_description, report_date;
     double repair_cost;
-    boolean insurance_paid;
+    String insurance_paid;
 
     public int getReport_id() {
         return report_id;
@@ -64,11 +64,11 @@ public class Report {
         this.report_date = report_date;
     }
 
-    public boolean getInsurance_paid() {
+    public String getInsurance_paid() {
         return insurance_paid;
     }
 
-    public void setInsurance_paid(boolean insurance_paid) {
+    public void setInsurance_paid(String insurance_paid) {
         this.insurance_paid = insurance_paid;
     }
 }

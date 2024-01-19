@@ -95,12 +95,6 @@ public class InitDatabase {
         editc.addCustomerFromJSON(Resources.CustomertoJSON5);
 
 
-        EditReportTable rep = new EditReportTable();
-        rep.addReportFromJSON(Resources.Report1);
-        rep.addReportFromJSON(Resources.Report2);
-        rep.addReportFromJSON(Resources.Report3);
-        rep.addReportFromJSON(Resources.Report4);
-        rep.addReportFromJSON(Resources.Report5);
 
         EditVehicleTable vhe = new EditVehicleTable();
         vhe.addVehicleFromJSON(Resources.vehicle1);
@@ -123,6 +117,13 @@ public class InitDatabase {
         vhe.addVehicleFromJSON(Resources.vehicle18);
         vhe.addVehicleFromJSON(Resources.vehicle19);
         vhe.addVehicleFromJSON(Resources.vehicle20);
+
+        EditReportTable rep = new EditReportTable();
+        rep.addReportFromJSON(Resources.Report1);
+        rep.addReportFromJSON(Resources.Report2);
+        rep.addReportFromJSON(Resources.Report3);
+        rep.addReportFromJSON(Resources.Report4);
+        rep.addReportFromJSON(Resources.Report5);
 
         EditRentalTable ren = new EditRentalTable();
         ren.addRentalFromJSON(Resources.rental1);

@@ -233,32 +233,42 @@ public class Resources {
     static String Report1 = "{\"report_id\":\"1\","
             + "\"malfunction_description\":\"Disko/Plato\","
             + "\"report_date\":\"2024-10-30\","
-            + "\"insurance_paid\":\"no\","
-            + "\"repair_cost\":\"600\"}";
+            + "\"insurance_paid\":\"FALSE\","
+            + "\"repair_cost\":\"600\","
+            + "\"customer_id\":\"1\","
+            + "\"vehicle_id\":\"10\"}";
 
     static String Report2 = "{\"report_id\":\"2\","
             + "\"malfunction_description\":\"Zygostathmisi\","
             + "\"report_date\":\"2024-7-23\","
-            + "\"insurance_paid\":\"yes\","
-            + "\"repair_cost\":\"100\"}";
+            + "\"insurance_paid\":\"TRUE\","
+            + "\"repair_cost\":\"100\","
+            + "\"customer_id\":\"2\","
+            + "\"vehicle_id\":\"2\"}";
 
     static String Report3 = "{\"report_id\":\"3\","
             + "\"malfunction_description\":\"Mpataria\","
             + "\"report_date\":\"2024-01-19\","
-            + "\"insurance_paid\":\"no\","
-            + "\"repair_cost\":\"500\"}";
+            + "\"insurance_paid\":\"FALSE\","
+            + "\"repair_cost\":\"500\","
+            + "\"customer_id\":\"3\","
+            + "\"vehicle_id\":\"13\"}";
 
     static String Report4 = "{\"report_id\":\"4\","
             + "\"malfunction_description\":\"Provolakia Omixlhs\","
             + "\"report_date\":\"2024-5-5\","
-            + "\"insurance_paid\":\"yes\","
-            + "\"repair_cost\":\"30\"}";
+            + "\"insurance_paid\":\"TRUE\","
+            + "\"repair_cost\":\"30\","
+            + "\"customer_id\":\"4\","
+            + "\"vehicle_id\":\"14\"}";
 
     static String Report5 = "{\"report_id\":\"5\","
             + "\"malfunction_description\":\"Skasmeno Lastixo\","
             + "\"report_date\":\"2024-03-25\","
-            + "\"insurance_paid\":\"no\","
-            + "\"repair_cost\":\"250\"}";
+            + "\"insurance_paid\":\"FALSE\","
+            + "\"repair_cost\":\"250\","
+            + "\"customer_id\":\"5\","
+            + "\"vehicle_id\":\"1\"}";
 
     static String ElectricScooter1 = "{\"vehicle_id\":\"16\","
             + "\"special_number\":\"123\"}";
