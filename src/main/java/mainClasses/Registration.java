@@ -6,7 +6,7 @@ package mainClasses;
 
 public class Registration {
     int registration_id, customer_id;
-    String username, password, registration_date;
+    String username, pass, registration_date;
 
     public int getRegistartion_id() {
         return registration_id;
@@ -33,11 +33,11 @@ public class Registration {
     }
 
     public String getPassword() {
-        return password;
+        return pass;
     }
 
     public void setPassword(String password) {
-        this.password = password;
+        this.pass = password;
     }
 
     public String getRegistration_date() {

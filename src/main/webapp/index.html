@@ -8,31 +8,33 @@
 <body>
     <h2>HY 360-Database</h2> 
 
-    <div class="row">
-        <div class="column column1Width" id="choices" style="background-color:#ADD8E6;">           
-            <button class="button" onclick="initDB()">Initialize Database</button>
-            <button class="button" onclick="deleteDB()">Delete Database</button>
-            See the account of a pet keeper <br><br>
-            <form id="loginForm" name="loginForm" onsubmit='getUser();return false;'>
-                <label for="username">username:</label><br>
-                <input type="text" id="username" name="username" required><br>
-                <label for="password">password:</label><br>
-                <input type="password" name="password" id="password" required><br>
-                <input type="submit" class="button" value="Login">
-            </form>
-            
-            <!-- Button to fetch and display available cars -->
-            <button class="button" onclick="getAvailableCars()">Get Available Cars</button>
+        <div class="row">
+
+
+            <div class="column column1Width" id="choices" style="background-color:#ADD8E6;">           
+
+                <button  class="button" onclick="initDB()">Initialize Database</button>
+                <button  class="button" onclick="deleteDB()">Delete Database</button>
+                See the account of a pet keeper <br><br>
+                <form id="loginForm" name="loginForm" onsubmit='getUser();return false;'>
+                    <label for="username">username:</label><br>
+                    <input type="text"  id="username" name="username" required><br>
+                    <label for="password">password:</label><br>
+                    <input type="password"  name="password" id="password" required><br>
+                    <input type="submit" class="button" value="Login">
+                </form>
+            </div>
+            <div class="column column2Width" id="output" style="background-color:#fffff0;">
+                <h2>Output</h2>
+                <div id="ajaxContent"></div>
+
+            </div>
 
         </div>
-        
-        <div class="column column2Width" id="output" style="background-color:#fffff0;">
-            <h2>Output</h2>
-            <div id="ajaxContent"></div>
-        </div>
-    </div>
-    <br>
-</body>
+        <br>
+
+    </body>
+
 </html>
 
 
