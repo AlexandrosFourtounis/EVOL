@@ -19,16 +19,15 @@ import javax.servlet.http.HttpServletResponse;
 public class RegisterUser extends HttpServlet {
     private static final long serialVersionUID = 1L;
     
-    // JDBC database URL, username, and password
-    private static final String JDBC_URL = "jdbc:mysql://localhost:3306/your_database";
-    private static final String JDBC_USER = "your_username";
-    private static final String JDBC_PASSWORD = "your_password";
+
+    private static final String JDBC_URL = "jdbc:mysql://localhost:3306/HY360_2024";
+    private static final String JDBC_USER = "root";
+    private static final String JDBC_PASSWORD = "";
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
 
-        // Retrieve form parameters
         String firstName = request.getParameter("firstName");
         String lastName = request.getParameter("lastName");
         String street = request.getParameter("street");
@@ -41,34 +40,33 @@ public class RegisterUser extends HttpServlet {
         String creditCardNumber = request.getParameter("creditCardNumber");
         String expirationDate = request.getParameter("expirationDate");
         String securityCode = request.getParameter("securityCode");
-        // Add other form parameters...
 
         PrintWriter out = response.getWriter();
         out.println("<html><body>");
 
         try {
-            // Load the JDBC driver
+
             Class.forName("com.mysql.cj.jdbc.Driver");
 
-            // Establish a connection
             try (Connection connection = DriverManager.getConnection(JDBC_URL, JDBC_USER, JDBC_PASSWORD)) {
-                // Perform user registration
-                String sql = "INSERT INTO users (first_name, last_name, street, city, region, postal_code, dob, age, license_number, credit_card_number, expiration_date, security_code) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
-                try (PreparedStatement preparedStatement = connection.prepareStatement(sql)) {
-                    preparedStatement.setString(1, firstName);
-                    preparedStatement.setString(2, lastName);
-                    preparedStatement.setString(3, street);
-                    preparedStatement.setString(4, city);
-                    preparedStatement.setString(5, region);
-                    preparedStatement.setString(6, postalCode);
-                    preparedStatement.setString(7, dob);
-                    preparedStatement.setString(8, age);
-                    preparedStatement.setString(9, licenseNumber);
-                    preparedStatement.setString(10, creditCardNumber);
-                    preparedStatement.setString(11, expirationDate);
-                    preparedStatement.setString(12, securityCode);
 
-                    // Add other parameters...
+                String sql = "INSERT INTO Customer (customer_id,registration_id,first_name, last_name, street, city, date_of_birth, drivers_licence_number, credit_card_number, expiration_date, security_code, city, region, zip_code, age) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?,?)";
+                try (PreparedStatement preparedStatement = connection.prepareStatement(sql)) {
+                    preparedStatement.setString(1, "111");
+                    preparedStatement.setString(2, "333");
+                    preparedStatement.setString(3, firstName);
+                    preparedStatement.setString(4, lastName);
+                    preparedStatement.setString(5, street);
+                    preparedStatement.setString(6, city);
+                    preparedStatement.setString(7, region);
+                    preparedStatement.setString(8, postalCode);
+                    preparedStatement.setString(9, dob);
+                    preparedStatement.setString(10, age);
+                    preparedStatement.setString(11, licenseNumber);
+                    preparedStatement.setString(12, creditCardNumber);
+                    preparedStatement.setString(13, expirationDate);
+                    preparedStatement.setString(14, securityCode);
+
 
                     int rowsAffected = preparedStatement.executeUpdate();
                     if (rowsAffected > 0) {
@@ -85,7 +83,7 @@ public class RegisterUser extends HttpServlet {
                         out.println("<p>Credit Card Number: " + creditCardNumber + "</p>");
                         out.println("<p>Expiration Date: " + expirationDate + "</p>");
                         out.println("<p>Security Code: " + securityCode + "</p>");
-                        // Add other data...
+
 
                         out.println("<p>Registration successful!</p>");
                     } else {
