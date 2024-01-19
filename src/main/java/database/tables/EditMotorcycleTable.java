@@ -23,7 +23,7 @@ public class EditMotorcycleTable {
 
  
     public void addMotorcycleFromJSON(String json) throws ClassNotFoundException{
-         Motorcycle Motorcycle=jsonToMotorcycle(json);
+        Motorcycle Motorcycle = jsonToMotorcycle(json);
         addMotorcycle(Motorcycle);
     }
     

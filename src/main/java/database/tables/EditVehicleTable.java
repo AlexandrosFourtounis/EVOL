@@ -24,7 +24,7 @@ public class EditVehicleTable {
  
     public void addVehicleFromJSON(String json) throws ClassNotFoundException{
          Vehicle vehicle=jsonToVehicle(json);
-         addNewVehicle(vehicle);
+        addNewVehicle(vehicle);
     }
     
     public Vehicle jsonToVehicle(String json){

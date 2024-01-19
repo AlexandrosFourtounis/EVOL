@@ -22,7 +22,7 @@ import database.DB_Connection;
 public class EditReportTable {
     public void addReportFromJSON(String json) throws ClassNotFoundException {
         Report user = jsonToReport(json);
-        //addNewRental(user);
+        addReport(user);
     }
 
     public Report jsonToReport(String json) {
@@ -106,7 +106,7 @@ public class EditReportTable {
      *
      * @throws ClassNotFoundException
      */
-    public void addRental(Report user) throws ClassNotFoundException {
+    public void addReport(Report user) throws ClassNotFoundException {
         try {
             Connection con = DB_Connection.getConnection();
 

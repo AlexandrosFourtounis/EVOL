@@ -23,7 +23,7 @@ public class EditRentalTable {
 
     public void addRentalFromJSON(String json) throws ClassNotFoundException {
         Rental user = jsonToRental(json);
-        //addNewRental(user);
+        addRental(user);
     }
 
     public Rental jsonToRental(String json) {
