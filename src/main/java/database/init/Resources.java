@@ -60,15 +60,15 @@ public class Resources {
     static String CartoJSON5 = "{\"vehicle_id\":\"5\",\"registration_number\":\"155\",\"type\":\"skoda\","
             + "\"number_of_passengers\":\"4\"}";
 
-    static String MotorcycletoJSON1 = "{\"vehicle_id\":\"13\",\"registration_number\":\"1223\"}";
+    static String MotorcycletoJSON1 = "{\"vehicle_id\":\"6\",\"registration_number\":\"1223\"}";
 
-    static String MotorcycletoJSON2 = "{\"vehicle_id\":\"53\",\"registration_number\":\"222\"}";
+    static String MotorcycletoJSON2 = "{\"vehicle_id\":\"7\",\"registration_number\":\"222\"}";
 
-    static String MotorcycletoJSON3 = "{\"vehicle_id\":\"93\",\"registration_number\":\"12223\"}";
+    static String MotorcycletoJSON3 = "{\"vehicle_id\":\"8\",\"registration_number\":\"12223\"}";
 
-    static String MotorcycletoJSON4 = "{\"vehicle_id\":\"33\",\"registration_number\":\"12238\"}";
+    static String MotorcycletoJSON4 = "{\"vehicle_id\":\"9\",\"registration_number\":\"12238\"}";
 
-    static String MotorcycletoJSON5 = "{\"vehicle_id\":\"43\",\"registration_number\":\"12239\"}";
+    static String MotorcycletoJSON5 = "{\"vehicle_id\":\"10\",\"registration_number\":\"12239\"}";
 
     static String vehicle1 = "{\"vehicle_id\":\"1\","
             + "\"color\":\"Blue\","
@@ -103,6 +103,126 @@ public class Resources {
             + "\"available\":\"yes\"}";
 
     static String vehicle5 = "{\"vehicle_id\":\"5\","
+            + "\"color\":\"Gray\","
+            + "\"brand\":\"Mercedes\","
+            + "\"autonomy\":\"700\","
+            + "\"daily_rental_cost\":\"180\","
+            + "\"daily_insurance_cost\":\"60\","
+            + "\"available\":\"no\"}";
+
+    static String vehicle6 = "{\"vehicle_id\":\"6\","
+            + "\"color\":\"Blue\","
+            + "\"brand\":\"Nissan\","
+            + "\"autonomy\":\"500\","
+            + "\"daily_rental_cost\":\"35\","
+            + "\"daily_insurance_cost\":\"10\","
+            + "\"available\":\"no\"}";
+
+    static String vehicle7 = "{\"vehicle_id\":\"7\","
+            + "\"color\":\"Black\","
+            + "\"brand\":\"Lamborghini\","
+            + "\"autonomy\":\"360\","
+            + "\"daily_rental_cost\":\"200\","
+            + "\"daily_insurance_cost\":\"80\","
+            + "\"available\":\"yes\"}";
+
+    static String vehicle8 = "{\"vehicle_id\":\"8\","
+            + "\"color\":\"White\","
+            + "\"brand\":\"Opel\","
+            + "\"autonomy\":\"550\","
+            + "\"daily_rental_cost\":\"28\","
+            + "\"daily_insurance_cost\":\"14\","
+            + "\"available\":\"no\"}";
+
+    static String vehicle9 = "{\"vehicle_id\":\"9\","
+            + "\"color\":\"Red\","
+            + "\"brand\":\"Ferrari\","
+            + "\"autonomy\":\"250\","
+            + "\"daily_rental_cost\":\"350\","
+            + "\"daily_insurance_cost\":\"120\","
+            + "\"available\":\"yes\"}";
+
+    static String vehicle10 = "{\"vehicle_id\":\"10\","
+            + "\"color\":\"Gray\","
+            + "\"brand\":\"Mercedes\","
+            + "\"autonomy\":\"700\","
+            + "\"daily_rental_cost\":\"180\","
+            + "\"daily_insurance_cost\":\"60\","
+            + "\"available\":\"no\"}";
+
+    static String vehicle11 = "{\"vehicle_id\":\"11\","
+            + "\"color\":\"Blue\","
+            + "\"brand\":\"Nissan\","
+            + "\"autonomy\":\"500\","
+            + "\"daily_rental_cost\":\"35\","
+            + "\"daily_insurance_cost\":\"10\","
+            + "\"available\":\"no\"}";
+
+    static String vehicle12 = "{\"vehicle_id\":\"12\","
+            + "\"color\":\"Black\","
+            + "\"brand\":\"Lamborghini\","
+            + "\"autonomy\":\"360\","
+            + "\"daily_rental_cost\":\"200\","
+            + "\"daily_insurance_cost\":\"80\","
+            + "\"available\":\"yes\"}";
+
+    static String vehicle13 = "{\"vehicle_id\":\"13\","
+            + "\"color\":\"White\","
+            + "\"brand\":\"Opel\","
+            + "\"autonomy\":\"550\","
+            + "\"daily_rental_cost\":\"28\","
+            + "\"daily_insurance_cost\":\"14\","
+            + "\"available\":\"no\"}";
+
+    static String vehicle14 = "{\"vehicle_id\":\"14\","
+            + "\"color\":\"Red\","
+            + "\"brand\":\"Ferrari\","
+            + "\"autonomy\":\"250\","
+            + "\"daily_rental_cost\":\"350\","
+            + "\"daily_insurance_cost\":\"120\","
+            + "\"available\":\"yes\"}";
+
+    static String vehicle15 = "{\"vehicle_id\":\"15\","
+            + "\"color\":\"Gray\","
+            + "\"brand\":\"Mercedes\","
+            + "\"autonomy\":\"700\","
+            + "\"daily_rental_cost\":\"180\","
+            + "\"daily_insurance_cost\":\"60\","
+            + "\"available\":\"no\"}";
+
+    static String vehicle16 = "{\"vehicle_id\":\"16\","
+            + "\"color\":\"Blue\","
+            + "\"brand\":\"Nissan\","
+            + "\"autonomy\":\"500\","
+            + "\"daily_rental_cost\":\"35\","
+            + "\"daily_insurance_cost\":\"10\","
+            + "\"available\":\"no\"}";
+
+    static String vehicle17 = "{\"vehicle_id\":\"17\","
+            + "\"color\":\"Black\","
+            + "\"brand\":\"Lamborghini\","
+            + "\"autonomy\":\"360\","
+            + "\"daily_rental_cost\":\"200\","
+            + "\"daily_insurance_cost\":\"80\","
+            + "\"available\":\"yes\"}";
+
+    static String vehicle18 = "{\"vehicle_id\":\"18\","
+            + "\"color\":\"White\","
+            + "\"brand\":\"Opel\","
+            + "\"autonomy\":\"550\","
+            + "\"daily_rental_cost\":\"28\","
+            + "\"daily_insurance_cost\":\"14\","
+            + "\"available\":\"no\"}";
+
+    static String vehicle19 = "{\"vehicle_id\":\"19\","
+            + "\"color\":\"Red\","
+            + "\"brand\":\"Ferrari\","
+            + "\"autonomy\":\"250\","
+            + "\"daily_rental_cost\":\"350\","
+            + "\"daily_insurance_cost\":\"120\","
+            + "\"available\":\"yes\"}";
+
+    static String vehicle20 = "{\"vehicle_id\":\"20\","
             + "\"color\":\"Gray\","
             + "\"brand\":\"Mercedes\","
             + "\"autonomy\":\"700\","

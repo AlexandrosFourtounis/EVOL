@@ -114,6 +114,22 @@ public class InitDatabase {
         vhe.addVehicleFromJSON(Resources.vehicle3);
         vhe.addVehicleFromJSON(Resources.vehicle4);
         vhe.addVehicleFromJSON(Resources.vehicle5);
+        vhe.addVehicleFromJSON(Resources.vehicle6);
+        vhe.addVehicleFromJSON(Resources.vehicle7);
+        vhe.addVehicleFromJSON(Resources.vehicle8);
+        vhe.addVehicleFromJSON(Resources.vehicle9);
+        vhe.addVehicleFromJSON(Resources.vehicle10);
+        vhe.addVehicleFromJSON(Resources.vehicle11);
+        vhe.addVehicleFromJSON(Resources.vehicle12);
+        vhe.addVehicleFromJSON(Resources.vehicle13);
+        vhe.addVehicleFromJSON(Resources.vehicle14);
+        vhe.addVehicleFromJSON(Resources.vehicle15);
+        vhe.addVehicleFromJSON(Resources.vehicle16);
+        vhe.addVehicleFromJSON(Resources.vehicle17);
+        vhe.addVehicleFromJSON(Resources.vehicle18);
+        vhe.addVehicleFromJSON(Resources.vehicle19);
+        vhe.addVehicleFromJSON(Resources.vehicle20);
+
 
         EditCarTable eut = new EditCarTable();
         eut.addcarFromJSON(Resources.CartoJSON1);
@@ -123,12 +139,12 @@ public class InitDatabase {
         eut.addcarFromJSON(Resources.CartoJSON5);
 
 
-//        EditMotorcycleTable motr = new EditMotorcycleTable();
-//        motr.addMotorcycleFromJSON(Resources.MotorcycletoJSON1);
-//        motr.addMotorcycleFromJSON(Resources.MotorcycletoJSON2);
-//        motr.addMotorcycleFromJSON(Resources.MotorcycletoJSON3);
-//        motr.addMotorcycleFromJSON(Resources.MotorcycletoJSON4);
-//        motr.addMotorcycleFromJSON(Resources.MotorcycletoJSON5);
+        EditMotorcycleTable motr = new EditMotorcycleTable();
+        motr.addMotorcycleFromJSON(Resources.MotorcycletoJSON1);
+        motr.addMotorcycleFromJSON(Resources.MotorcycletoJSON2);
+        motr.addMotorcycleFromJSON(Resources.MotorcycletoJSON3);
+        motr.addMotorcycleFromJSON(Resources.MotorcycletoJSON4);
+        motr.addMotorcycleFromJSON(Resources.MotorcycletoJSON5);
 
 //        EditBicycleTable bicy = new EditBicycleTable();
 //        bicy.addBicycleFromJSON(Resources.Bicycle1);

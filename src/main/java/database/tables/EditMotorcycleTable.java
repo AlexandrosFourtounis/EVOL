@@ -167,15 +167,9 @@ public class EditMotorcycleTable {
         Statement stmt = con.createStatement();
 
         String query = "CREATE TABLE Motorcycle "
-                + "(Motorcycle_id INTEGER not null unique, "
-                + "    color VARCHAR(20),"
-                + "    brand VARCHAR(20),	"
-                + "    autonomy INTEGER,"
-                + "    daily_rental_cost INTEGER,"
-                + "    daily_insurance_cost INTEGER,"
-                + "    available BOOLEAN,"
-                + "    gender  VARCHAR (7) not null,"
-                + " PRIMARY KEY (Motorcycle_id))";
+                + "(Vehicle_id INTEGER not null UNIQUE,"
+                 + " registration_number INTEGER,"
+                 + " FOREIGN KEY (vehicle_id) REFERENCES Vehicle(vehicle_id))";
         stmt.execute(query);
         stmt.close();
     }
@@ -228,15 +222,10 @@ public class EditMotorcycleTable {
             Statement stmt = con.createStatement();
 
             String insertQuery = "INSERT INTO "
-                    + " Motorcycle (Motorcycle_id,color,brand,autonomy,daily_rental_cost,daily_insurance_cost,available)"
+                    + " Motorcycle (vehicle_id,registration_number)"
                     + " VALUES ("
                     + "'" + Motorcycle.getVehicle_id() + "',"
-                    + "'" + Motorcycle.getColor() + "',"
-                    + "'" + Motorcycle.getBrand() + "',"
-                    + "'" + Motorcycle.getAutonomy() + "',"
-                    + "'" + Motorcycle.getDaily_rental_cost() + "',"
-                    + "'" + Motorcycle.getDaily_insurance_cost() + "',"
-                    + "'" + Motorcycle.getAvailable() + "',"
+                    + "'" + Motorcycle.getRegistration_number() + "'"
                     + ")";
             //stmt.execute(table);
             System.out.println(insertQuery);
