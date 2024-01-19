@@ -103,6 +103,7 @@ CREATE TABLE IF NOT EXISTS Electric Scooter
     FOREIGN KEY(vehicle_id) REFERENCES Vehicle(vehicle_id)
 );
 
+/*Query2*/
 SELECT v.vehicle_id, v.brand, r.rental_date, r.duration, c.first_name, c.last_name 
 FROM vehicle v 
 JOIN rental r ON v.vehicle_id = r.vehicle_id 
@@ -110,6 +111,22 @@ JOIN customer c ON r.customer_id = c.customer_id
 WHERE r.rental_date 
 BETWEEN '2020-01-01' AND '2024-04-16' AND v.available = "yes";
 
-
+/*Query3*/
 SELECT MAX(duration), MIN(duration),AVG(duration)
 FROM rental;
+
+/*Query1*/
+SELECT v.brand, v.color, v.autonomy, v.daily_rental_cost, v.daily_insurance_cost, 
+       CASE WHEN v.available THEN 'Available' ELSE 'Rented' END AS status,
+       CASE 
+            WHEN c.vehicle_id IS NOT NULL THEN 'Car'
+            WHEN m.vehicle_id IS NOT NULL THEN 'Motorcycle'
+            WHEN b.vehicle_id IS NOT NULL THEN 'Bicycle'
+            WHEN e.vehicle_id IS NOT NULL THEN 'Electric Scooter'
+       END AS category
+FROM Vehicle v
+LEFT JOIN Car c ON v.vehicle_id = c.vehicle_id
+LEFT JOIN Motorcycle m ON v.vehicle_id = m.vehicle_id
+LEFT JOIN Bicycle b ON v.vehicle_id = b.vehicle_id
+LEFT JOIN ElectricScooter e ON v.vehicle_id = e.vehicle_id
+ORDER BY category;
