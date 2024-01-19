@@ -99,8 +99,8 @@ public class EditRentalTable {
                 + "    rental_date DATE, "
                 + "    duration INTEGER, "
                 + "    cost INTEGER,"
-                //+ " FOREIGN KEY(customer_id) REFERENCES Customer(customer_id), "
-                //+ " FOREIGN KEY(vehicle_id) REFERENCES Vehicle(vehicle_id), "
+                + " FOREIGN KEY(customer_id) REFERENCES Customer(customer_id), "
+                + " FOREIGN KEY(vehicle_id) REFERENCES Vehicle(vehicle_id), "
                 + " PRIMARY KEY(rental_id))";
         stmt.execute(query);
         stmt.close();
