@@ -111,9 +111,25 @@ JOIN customer c ON r.customer_id = c.customer_id
 WHERE r.rental_date 
 BETWEEN '2020-01-01' AND '2024-04-16' AND v.available = "yes";
 
-/*Query3*/
-SELECT MAX(duration), MIN(duration),AVG(duration)
-FROM rental;
+/*Query3 */
+SELECT
+    MAX(CASE WHEN c.vehicle_id  THEN r.duration END) AS max_duration_cars,
+    MIN(CASE WHEN c.vehicle_id  THEN r.duration END) AS min_duration_cars,
+    AVG(CASE WHEN c.vehicle_id  THEN r.duration END) AS avg_duration_cars,
+    MAX(CASE WHEN m.vehicle_id  THEN r.duration END) AS max_duration_motorcycles,
+    MIN(CASE WHEN m.vehicle_id  THEN r.duration END) AS min_duration_motorcycles,
+    AVG(CASE WHEN m.vehicle_id  THEN r.duration END) AS avg_duration_motorcycles,
+    MAX(CASE WHEN b.vehicle_id  THEN r.duration END) AS max_duration_bicycles,
+    MIN(CASE WHEN b.vehicle_id  THEN r.duration END) AS min_duration_bicycles,
+    AVG(CASE WHEN b.vehicle_id  THEN r.duration END) AS avg_duration_bicycles,
+    MAX(CASE WHEN es.vehicle_id  THEN r.duration END) AS max_duration_scooters,
+    MIN(CASE WHEN es.vehicle_id  THEN r.duration END) AS min_duration_scooters,
+    AVG(CASE WHEN es.vehicle_id  THEN r.duration END) AS avg_duration_scooters
+FROM Rental r
+LEFT JOIN Car c ON r.vehicle_id = c.vehicle_id
+LEFT JOIN Motorcycle m ON r.vehicle_id = m.vehicle_id
+LEFT JOIN Bicycle b ON r.vehicle_id = b.vehicle_id
+LEFT JOIN Electric_scooter es ON r.vehicle_id = es.vehicle_id;
 
 /*Query1*/
 SELECT v.brand, v.color, v.autonomy, v.daily_rental_cost, v.daily_insurance_cost, 
@@ -128,5 +144,23 @@ FROM Vehicle v
 LEFT JOIN Car c ON v.vehicle_id = c.vehicle_id
 LEFT JOIN Motorcycle m ON v.vehicle_id = m.vehicle_id
 LEFT JOIN Bicycle b ON v.vehicle_id = b.vehicle_id
-LEFT JOIN ElectricScooter e ON v.vehicle_id = e.vehicle_id
+LEFT JOIN Electric_scooter e ON v.vehicle_id = e.vehicle_id
 ORDER BY category;
+
+
+/*Query4*/
+SELECT
+    'Car' AS category,
+    SUM(CASE WHEN c.vehicle_id IS NOT NULL THEN r.cost END) AS total_profit_cars,
+    'Motorcycle' AS category,
+    SUM(CASE WHEN m.vehicle_id IS NOT NULL THEN r.cost END) AS total_profit_motorcycles,
+    'Bicycle' AS category,
+    SUM(CASE WHEN b.vehicle_id IS NOT NULL THEN r.cost END) AS total_profit_bicycles,
+    'Electric Scooter' AS category,
+    SUM(CASE WHEN es.vehicle_id IS NOT NULL THEN r.cost END) AS total_profit_scooters
+FROM Rental r
+LEFT JOIN Car c ON r.vehicle_id = c.vehicle_id
+LEFT JOIN Motorcycle m ON r.vehicle_id = m.vehicle_id
+LEFT JOIN Bicycle b ON r.vehicle_id = b.vehicle_id
+LEFT JOIN Electric_scooter es ON r.vehicle_id = es.vehicle_id
+WHERE r.rental_date BETWEEN '2020-01-01' AND '2023-01-01';
