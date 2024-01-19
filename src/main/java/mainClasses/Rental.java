@@ -1,14 +1,9 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+/* csd5031 , csd5020 , csd4845
+* HY-360 Rental.java
  */
 package mainClasses;
 
-/**
- *
- * @author georgia_tsanta
- */
+
 public class Rental {
     int rental_id, customer_id, vehicle_id;
     String first_name, last_name, rental_date;

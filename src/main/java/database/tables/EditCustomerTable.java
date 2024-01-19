@@ -1,7 +1,5 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+/* csd5031 , csd5020 , csd4845
+* HY-360 EditCustomerTable.java
  */
 package database.tables;
 
@@ -15,10 +13,7 @@ import java.sql.Statement;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-/**
- *
- * @author Alexandros_Fourtounis
- */
+
 public class EditCustomerTable {
 
     public void addCustomerFromJSON(String json) throws ClassNotFoundException {
@@ -57,15 +52,6 @@ public class EditCustomerTable {
         String json = gson.toJson(r, Customer.class);
         return json;
     }
-
-//    public void updateCustomer(int customer_id,  String status) throws SQLException, ClassNotFoundException {
-//        Connection con = DB_Connection.getConnection();
-//        Statement stmt = con.createStatement();
-//        String updateQuery = "UPDATE Customer SET status='"+status+"' WHERE booking_id= '"+bookingID+"'";
-//        stmt.executeUpdate(updateQuery);
-//        stmt.close();
-//        con.close();
-//    }
 
     public void createCustomerTable() throws SQLException, ClassNotFoundException {
         Connection con = DB_Connection.getConnection();
@@ -124,12 +110,12 @@ public class EditCustomerTable {
                     + "'" + (2024 - cust.getDate_of_birth()) + "'"
                     + ")";
 
-            //stmt.execute(table);
+      
 
             stmt.executeUpdate(insertQuery);
             System.out.println("# The customer was successfully added in the database.");
 
-            /* Get the member id from the database and set it to the member */
+       
             stmt.close();
 
         } catch (SQLException ex) {

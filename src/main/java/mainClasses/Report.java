@@ -1,14 +1,9 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+/* csd5031 , csd5020 , csd4845
+* HY-360 Report.java
  */
 package mainClasses;
 
-/**
- *
- * @author georgia_tsanta
- */
+
 public class Report {
     int report_id, vehicle_id, customer_id;
     String malfunction_description, report_date;

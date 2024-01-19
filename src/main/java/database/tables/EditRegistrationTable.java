@@ -1,7 +1,5 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+/* csd5031 , csd5020 , csd4845
+* HY-360 EditRegistrationTable.java
  */
 package database.tables;
 
@@ -15,10 +13,7 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import mainClasses.Registration;
 
-/**
- *
- * @author Alexandros_Fourtounis
- */
+
 public class EditRegistrationTable {
     public void addRegistrationFromJSON(String json) throws ClassNotFoundException {
         Registration r = jsonToRegistration(json);
@@ -57,14 +52,6 @@ public class EditRegistrationTable {
         return json;
     }
 
-//    public void updateCustomer(int customer_id,  String status) throws SQLException, ClassNotFoundException {
-//        Connection con = DB_Connection.getConnection();
-//        Statement stmt = con.createStatement();
-//        String updateQuery = "UPDATE Customer SET status='"+status+"' WHERE booking_id= '"+bookingID+"'";
-//        stmt.executeUpdate(updateQuery);
-//        stmt.close();
-//        con.close();
-//    }
     public void createRegistrationTable() throws SQLException, ClassNotFoundException {
         Connection con = DB_Connection.getConnection();
         Statement stmt = con.createStatement();
@@ -101,12 +88,10 @@ public class EditRegistrationTable {
                     + "'" + reg.getPassword() + "',"
                     + "'" + reg.getRegistration_date() + "'"
                     + ")";
-            //stmt.execute(table);
 
             stmt.executeUpdate(insertQuery);
             System.out.println("# The registration was successfully added in the database.");
 
-            /* Get the member id from the database and set it to the member */
             stmt.close();
 
         } catch (SQLException ex) {

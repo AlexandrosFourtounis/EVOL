@@ -1,17 +1,11 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+/* csd5031 , csd5020 , csd4845
+* HY-360 JSON_Converter.java
  */
 package mainClasses;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 
-/**
- *
- * @author micha
- */
 public class JSON_Converter {
 
 

@@ -1,7 +1,5 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+/* csd5031 , csd5020 , csd4845
+* HY-360 EditVehicleTable.java
  */
 package database.tables;
 
@@ -15,10 +13,7 @@ import java.sql.Statement;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-/**
- *
- * @author Mike
- */
+
 public class EditVehicleTable {
 
  
@@ -41,108 +36,6 @@ public class EditVehicleTable {
         return json;
     }
     
-   
-    /*public void updateVehicle(String vehiclename,String personalpage) throws SQLException, ClassNotFoundException{
-        Connection con = DB_Connection.getConnection();
-        Statement stmt = con.createStatement();
-        String update="UPDATE Vehicles SET personalpage='"+personalpage+"' WHERE vehiclename = '"+vehiclename+"'";
-        stmt.executeUpdate(update);
-    }*/
-    
-    /*public void printVehicleDetails(String vehiclename, String password) throws SQLException, ClassNotFoundException{
-         Connection con = DB_Connection.getConnection();
-        Statement stmt = con.createStatement();
-
-        ResultSet rs;
-        try {
-            rs = stmt.executeQuery("SELECT * FROM Vehicle WHERE vehiclename = '" + vehiclename + "' AND password='"+password+"'");
-            while (rs.next()) {
-                System.out.println("===Result===");
-                DB_Connection.printResults(rs);
-            }
-
-        } catch (Exception e) {
-            System.err.println("Got an exception! ");
-            System.err.println(e.getMessage());
-        }
-    }*/
-    
-    /*public Vehicle databaseToVehicles(String vehiclename, String password) throws SQLException, ClassNotFoundException{
-         Connection con = DB_Connection.getConnection();
-        Statement stmt = con.createStatement();
-
-        ResultSet rs;
-        try {
-            rs = stmt.executeQuery("SELECT * FROM Vehicles WHERE vehiclename = '" + vehiclename + "' AND password='"+password+"'");
-            rs.next();
-            String json=DB_Connection.getResultsToJSON(rs);
-            Gson gson = new Gson();
-            Vehicle vehicle = gson.fromJson(json, Vehicle.class);
-            return vehicle;
-        } catch (Exception e) {
-            System.err.println("Got an exception! ");
-            System.err.println(e.getMessage());
-        }
-        return null;
-    }*/
-    
-    /* public ArrayList<Vehicle> getAvailableKeepers(String type) throws SQLException, ClassNotFoundException {
-        Connection con = DB_Connection.getConnection();
-        Statement stmt = con.createStatement();
-        ArrayList<Vehicle> keepers = new ArrayList<Vehicle>();
-        ResultSet rs = null;
-        try {
-            //if(type=="catkeeper")
-            if("all".equals(type))     
-            rs = stmt.executeQuery("SELECT * FROM `Vehicles` WHERE  `Vehicles`.`keeper_id` not in (select keeper_id "
-                 + "from `bookings` where `status`='requested' or  `status`='accepted')\n" +"");
-            else if ("catKeepers".equals(type))
-                 rs = stmt.executeQuery("SELECT * FROM `Vehicles` WHERE `Vehicles`.`catkeeper`='true' AND `Vehicles`.`keeper_id` not in (select keeper_id "
-                 + "from `bookings` where `status`='requested' or  `status`='accepted')");         
-             else if ("dogKeepers".equals(type))
-                 rs = stmt.executeQuery("SELECT * FROM `Vehicles` WHERE `Vehicles`.`dogkeeper`='true' AND `Vehicles`.`keeper_id` not in (select keeper_id "
-                 + "from `bookings` where `status`='requested' or  `status`='accepted')");
-        
-           
-            while (rs.next()) {
-                String json = DB_Connection.getResultsToJSON(rs);
-                Gson gson = new Gson();
-                Vehicle keeper = gson.fromJson(json, Vehicle.class);
-                keepers.add(keeper);
-            }
-            return keepers;
-        } catch (Exception e) {
-            System.err.println("Got an exception! ");
-            System.err.println(e.getMessage());
-        }
-        return null;
-    }*/
-     
-    /*public ArrayList<Vehicle> getKeepers(String type) throws SQLException, ClassNotFoundException {
-        Connection con = DB_Connection.getConnection();
-        Statement stmt = con.createStatement();
-        ArrayList<Vehicle> keepers = new ArrayList<Vehicle>();
-        ResultSet rs = null;
-        try {
-            if("catkeeper".equals(type))
-                 rs = stmt.executeQuery("SELECT * FROM Vehicles WHERE catkeeper= '" + "true" + "'");
-            else if ("dogkeeper".equals(type))
-                  rs = stmt.executeQuery("SELECT * FROM Vehicles WHERE dogkeeper= '" + "true" + "'");
-
-           
-            while (rs.next()) {
-                String json = DB_Connection.getResultsToJSON(rs);
-                Gson gson = new Gson();
-                Vehicle keeper = gson.fromJson(json, Vehicle.class);
-                keepers.add(keeper);
-            }
-            return keepers;
-        } catch (Exception e) {
-            System.err.println("Got an exception! ");
-            System.err.println(e.getMessage());
-        }
-        return null;
-    }*/
     
     public String databaseVehicleToJSON(int vehicle_id) throws SQLException, ClassNotFoundException{
          Connection con = DB_Connection.getConnection();
@@ -178,43 +71,6 @@ public class EditVehicleTable {
         stmt.execute(query);
         stmt.close();
     }
-    /*public Vehicle databaseToVehiclesvehiclename(String vehiclename) throws SQLException, ClassNotFoundException {
-        Connection con = DB_Connection.getConnection();
-        Statement stmt = con.createStatement();
-
-        ResultSet rs;
-        try {
-            rs = stmt.executeQuery("SELECT * FROM Vehicle WHERE vehiclename = '" + vehiclename + "'");
-            rs.next();
-            String json = DB_Connection.getResultsToJSON(rs);
-            Gson gson = new Gson();
-            Vehicle vehicle = gson.fromJson(json, Vehicle.class);
-            return vehicle;
-        } catch (Exception e) {
-            System.err.println("Got an exception! ");
-            System.err.println(e.getMessage());
-        }
-        return null;
-    }*/
-
-    /*public Vehicle databaseToVehiclesEmail(String email) throws SQLException, ClassNotFoundException {
-        Connection con = DB_Connection.getConnection();
-        Statement stmt = con.createStatement();
-
-        ResultSet rs;
-        try {
-            rs = stmt.executeQuery("SELECT * FROM Vehicles WHERE email = '" + email + "'");
-            rs.next();
-            String json = DB_Connection.getResultsToJSON(rs);
-            Gson gson = new Gson();
-            Vehicle vehicle = gson.fromJson(json, Vehicle.class);
-            return vehicle;
-        } catch (Exception e) {
-            System.err.println("Got an exception! ");
-            System.err.println(e.getMessage());
-        }
-        return null;
-    }*/
     /**
      * Establish a database connection and add in the database.
      *
@@ -237,12 +93,10 @@ public class EditVehicleTable {
                     + "'" + vehicle.getDaily_insurance_cost() + "',"
                     + "'" + vehicle.getAvailable() + "'"
                     + ")";
-            //stmt.execute(table);
             System.out.println(insertQuery);
             stmt.executeUpdate(insertQuery);
             System.out.println("# The vehicle was successfully added in the database.");
 
-            /* Get the member id from the database and set it to the member */
             stmt.close();
 
         } catch (SQLException ex) {

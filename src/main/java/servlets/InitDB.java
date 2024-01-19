@@ -1,7 +1,5 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+/* csd5031 , csd5020 , csd4845
+* HY-360 InitDB.java
  */
 package servlets;
 
@@ -25,8 +23,6 @@ public class InitDB extends HttpServlet {
         String[] args = null;
 
         try {
-            // Your database initialization logic here
-            // For simplicity, let's assume you have a method called initDB in your InitDB class
             InitDatabase.main(args);
         } catch (SQLException ex) {
             Logger.getLogger(InitDB.class.getName()).log(Level.SEVERE, null, ex);

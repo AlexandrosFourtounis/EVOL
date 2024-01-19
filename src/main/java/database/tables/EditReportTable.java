@@ -1,7 +1,5 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+/* csd5031 , csd5020 , csd4845
+* HY-360 EditReportTable.java
  */
 package database.tables;
 
@@ -15,10 +13,7 @@ import java.util.logging.Logger;
 import mainClasses.Report;
 import database.DB_Connection;
 
-/**
- *
- * @author georgia_tsanta
- */
+
 public class EditReportTable {
     public void addReportFromJSON(String json) throws ClassNotFoundException {
         Report user = jsonToReport(json);
@@ -39,15 +34,7 @@ public class EditReportTable {
         return json;
     }
 
-    /*
-
-    public void updateRental(String username,String personalpage) throws SQLException, ClassNotFoundException{
-        Connection con = DB_Connection.getConnection();
-        Statement stmt = con.createStatement();
-        String update="UPDATE rental SET personalpage='"+personalpage+"' WHERE username = '"+username+"'";
-        stmt.executeUpdate(update);
-    }
-     */
+ 
     public Report databaseToReport(int report_id) throws SQLException, ClassNotFoundException {
         Connection con = DB_Connection.getConnection();
         Statement stmt = con.createStatement();
@@ -128,12 +115,10 @@ public class EditReportTable {
                     + "'" + user.getVehicle_id() + "'"
                     + ")";
 
-            //stmt.execute(table);
             System.out.println(insertQuery);
             stmt.executeUpdate(insertQuery);
             System.out.println("# The Report was successfully added in the database.");
 
-            /* Get the member id from the database and set it to the member */
             stmt.close();
 
         } catch (SQLException ex) {

@@ -1,14 +1,8 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+/* csd5031 , csd5020 , csd4845
+* HY-360 Bicycle.java
  */
 package mainClasses;
 
-/**
- *
- * @author georgia_tsanta
- */
 public class Bicycle extends Vehicle {
 
     int special_number;

@@ -1,14 +1,8 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+/* csd5031 , csd5020 , csd4845
+* HY-360 Resources.java
  */
 package database.init;
 
-/**
- *
- * @author mountant
- */
 public class Resources {
 
     static String CustomertoJSON1 = "{\"customer_id\":\"1\",\"registration_id\":\"11\",\"firstname\":\"alexandros\","
