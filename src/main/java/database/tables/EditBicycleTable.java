@@ -12,6 +12,7 @@ import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.ArrayList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -240,6 +241,27 @@ public class EditBicycleTable {
         }
     }
 
-   
+    public ArrayList<Bicycle> getAvailableBicycle() throws SQLException, ClassNotFoundException {
+        Connection con = DB_Connection.getConnection();
+        Statement stmt = con.createStatement();
+        ArrayList<Bicycle> availableBicycle = new ArrayList<>();
+        ResultSet rs = null;
+        try {
+            rs = stmt.executeQuery("SELECT * FROM Bicycle WHERE vehicle_id IN(SELECT vehicle_id FROM Vehicle "
+                    + "WHERE available = 'yes')");
+            while (rs.next()) {
+                String json = DB_Connection.getResultsToJSON(rs);
+                Gson gson = new Gson();
+                Bicycle Bicycle = gson.fromJson(json, Bicycle.class
+                );
+                availableBicycle.add(Bicycle);
+            }
+            return availableBicycle;
+        } catch (Exception e) {
+            System.err.println("Got an exception! ");
+            System.err.println(e.getMessage());
+        }
+        return null;
+    }
 
 }

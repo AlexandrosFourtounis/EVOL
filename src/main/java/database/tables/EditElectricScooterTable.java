@@ -12,6 +12,7 @@ import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.ArrayList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -239,6 +240,29 @@ public class EditElectricScooterTable {
         } catch (SQLException ex) {
             Logger.getLogger(EditElectricScooterTable.class.getName()).log(Level.SEVERE, null, ex);
         }
+    }
+
+    public ArrayList<ElectricScooter> getAvailableElectricScooters() throws SQLException, ClassNotFoundException {
+        Connection con = DB_Connection.getConnection();
+        Statement stmt = con.createStatement();
+        ArrayList<ElectricScooter> availableElectricScooters = new ArrayList<>();
+        ResultSet rs = null;
+        try {
+            rs = stmt.executeQuery("SELECT * FROM Electric_Scooter WHERE vehicle_id IN(SELECT vehicle_id FROM Vehicle "
+                    + "WHERE available = 'yes')");
+            while (rs.next()) {
+                String json = DB_Connection.getResultsToJSON(rs);
+                Gson gson = new Gson();
+                ElectricScooter ElectricScooter = gson.fromJson(json, ElectricScooter.class
+                );
+                availableElectricScooters.add(ElectricScooter);
+            }
+            return availableElectricScooters;
+        } catch (Exception e) {
+            System.err.println("Got an exception! ");
+            System.err.println(e.getMessage());
+        }
+        return null;
     }
 
    
