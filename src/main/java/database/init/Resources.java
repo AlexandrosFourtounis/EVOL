@@ -45,19 +45,19 @@ public class Resources {
             + "\"age\":\"25\","
             + "\"drivers\":\"niskos\"}";
 
-    static String CartoJSON1 = "{\"vehicle_id\":\"1\",\"registration_number\":\"123\",\"car_type\":\"porshe\","
+    static String CartoJSON1 = "{\"vehicle_id\":\"1\",\"registration_number\":\"123\",\"type\":\"porshe\","
             + "\"number_of_passengers\":\"4\"}";
 
-    static String CartoJSON2 = "{\"vehicle_id\":\"2\",\"registration_number\":\"1232\",\"car_type\":\"fiat panda\","
+    static String CartoJSON2 = "{\"vehicle_id\":\"2\",\"registration_number\":\"1232\",\"type\":\"fiat panda\","
             + "\"number_of_passengers\":\"2\"}";
 
-    static String CartoJSON3 = "{\"vehicle_id\":\"3\",\"registration_number\":\"1323\",\"car_type\":\"mercedes\","
+    static String CartoJSON3 = "{\"vehicle_id\":\"3\",\"registration_number\":\"1323\",\"type\":\"mercedes\","
             + "\"number_of_passengers\":\"4\"}";
 
-    static String CartoJSON4 = "{\"vehicle_id\":\"4\",\"registration_number\":\"4123\",\"car_type\":\"lambo\","
+    static String CartoJSON4 = "{\"vehicle_id\":\"4\",\"registration_number\":\"4123\",\"type\":\"lambo\","
             + "\"number_of_passengers\":\"2\"}";
 
-    static String CartoJSON5 = "{\"vehicle_id\":\"5\",\"registration_number\":\"155\",\"car_type\":\"skoda\","
+    static String CartoJSON5 = "{\"vehicle_id\":\"5\",\"registration_number\":\"155\",\"\type\":\"skoda\","
             + "\"number_of_passengers\":\"4\"}";
 
     static String MotorcycletoJSON1 = "{\"vehicle_id\":\"13\",\"registration_number\":\"1223\"}";

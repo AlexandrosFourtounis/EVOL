@@ -169,7 +169,7 @@ public class EditCarTable {
         String query = "CREATE TABLE Car "
                 + "(vehicle_id INTEGER not null unique, "
                 + "    registration_number INTEGER not null,"
-                + "    car_type VARCHAR(20), "
+                + "    type VARCHAR(20), "
                 + "    number_of_passengers INTEGER,"
                  + " FOREIGN KEY (vehicle_id) REFERENCES Vehicle(vehicle_id))";
         stmt.execute(query);
