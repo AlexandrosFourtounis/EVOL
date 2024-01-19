@@ -19,14 +19,22 @@
 
                 <button  class="button" onclick="initDB()">Initialize Database</button>
                 <button  class="button" onclick="deleteDB()">Delete Database</button>
-                See the account of a pet keeper <br><br>
-                <form id="loginForm" name="loginForm" onsubmit='getUser();return false;'>
+                <br><br>
+                <form id="loginForm" name="loginForm" onsubmit="loginPOST();return false;">
                     <label for="username">username:</label><br>
                     <input type="text"  id="username" name="username" required><br>
                     <label for="password">password:</label><br>
                     <input type="password"  name="password" id="password" required><br>
                     <input type="submit" class="button" value="Login">
                 </form>
+            </div>
+            <div class="user-container">
+                <h2>User Data and Messages</h2>
+                <div id="error"></div>
+                <div id="userData"></div>
+                <div id="messages"></div>
+                <div id="ajaxContent"></div>
+
             </div>
             <div class="column column2Width" id="output" style="background-color:#fffff0;">
                 <h2>Output</h2>

@@ -53,6 +53,44 @@ public class EditCustomerTable {
         return json;
     }
 
+    public Customer databaseToCustomerUsername(String username) throws SQLException, ClassNotFoundException {
+        Connection con = DB_Connection.getConnection();
+        Statement stmt = con.createStatement();
+
+        ResultSet rs;
+        try {
+            rs = stmt.executeQuery("SELECT * FROM Customer WHERE username = '" + username + "'");
+            rs.next();
+            String json = DB_Connection.getResultsToJSON(rs);
+            Gson gson = new Gson();
+            Customer user = gson.fromJson(json, Customer.class);
+            return user;
+        } catch (Exception e) {
+            System.err.println("Got an exception! ");
+            System.err.println(e.getMessage());
+        }
+        return null;
+    }
+
+    public Customer databaseToCustomer(String username, String password) throws SQLException, ClassNotFoundException {
+        Connection con = DB_Connection.getConnection();
+        Statement stmt = con.createStatement();
+
+        ResultSet rs;
+        try {
+            rs = stmt.executeQuery("SELECT * FROM Customer WHERE username = '" + username + "' AND password='" + password + "'");
+            rs.next();
+            String json = DB_Connection.getResultsToJSON(rs);
+            Gson gson = new Gson();
+            Customer user = gson.fromJson(json, Customer.class);
+            return user;
+        } catch (Exception e) {
+            System.err.println("Got an exception! ");
+            System.err.println(e.getMessage());
+        }
+        return null;
+    }
+
     public void createCustomerTable() throws SQLException, ClassNotFoundException {
         Connection con = DB_Connection.getConnection();
         Statement stmt = con.createStatement();
