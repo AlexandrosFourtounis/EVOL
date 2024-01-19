@@ -144,7 +144,7 @@ FROM Vehicle v
 LEFT JOIN Car c ON v.vehicle_id = c.vehicle_id
 LEFT JOIN Motorcycle m ON v.vehicle_id = m.vehicle_id
 LEFT JOIN Bicycle b ON v.vehicle_id = b.vehicle_id
-LEFT JOIN ElectricScooter e ON v.vehicle_id = e.vehicle_id
+LEFT JOIN Electric_scooter e ON v.vehicle_id = e.vehicle_id
 ORDER BY category;
 
 
