@@ -22,8 +22,17 @@
                     <input type="submit" class="button" value="Login">
                 </form>
 
-                <!-- Button to fetch and display available cars -->
-                <button class="button" onclick="getAvailableCars()">Get Available Cars</button>
+                <div class="column column2Width" id="output" style="background-color:#fffff0;">
+              <button class="button" onclick="getAvailableCars()">See Available Cars</button>
+              <!-- Add this button inside your existing HTML -->
+                <button class="button" onclick="getAvailableBicycles()">See Available Bicycles</button>
+                <button class="button" onclick="getAvailableCars()">See Available Motorcycles</button><!-- comment -->
+               <!-- Add a new button for electric scooters -->
+                <button class="button" onclick="getAvailableElectricScooters()">See Available Electric Scooters</button>
+
+                <!-- Add a new div to display electric scooters -->
+                <div id="electricScooterContent"></div>
+
 
             </div>
 

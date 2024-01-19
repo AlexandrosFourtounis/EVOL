@@ -124,3 +124,47 @@ function registerNewUser() {
     xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
     xhr.send(formData);
 }
+
+function getAvailableBicycles() {
+    var xhr = new XMLHttpRequest();
+    xhr.onload = function () {
+        if (xhr.readyState === 4 && xhr.status === 200) {
+            $("#ajaxContent").html(createTableFromJSONbicycle(JSON.parse(xhr.responseText)));
+        } else if (xhr.status !== 200) {
+            $("#ajaxContent").html("Error occurred while fetching available bicycles");
+        }
+    };
+
+    xhr.open('GET', 'GetAvailableBicycles');
+    xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+    xhr.send();
+}
+
+function createTableFromJSONbicycle(data) {
+    var html = "<table><tr><th>Category</th><th>Value</th></tr>";
+
+    for (var i = 0; i < data.length; i++) {
+        var bicycle = data[i];
+
+        html += "<tr><td>Vehicle ID</td><td>" + bicycle.vehicle_id + "</td></tr>";
+        html += "<tr><td>Special Number</td><td>" + bicycle.special_number + "</td></tr>";
+    }
+
+    html += "</table>";
+    return html;
+}
+
+// Add this function to fetch available electric scooters
+function getAvailableElectricScooters() {
+    var xhr = new XMLHttpRequest();
+    xhr.onload = function () {
+        if (xhr.readyState === 4 && xhr.status === 200) {
+            $("#ajaxContent").html(createTableFromJSONbicycle(JSON.parse(xhr.responseText)));
+        } else if (xhr.status !== 200) {
+            $("#electricScooterContent").html("Error retrieving available electric scooters");
+        }
+    };
+
+    xhr.open('GET', 'GetAvailableElectricScooters');
+    xhr.send();
+}
