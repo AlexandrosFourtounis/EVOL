@@ -35,32 +35,33 @@ function deleteDB() {
 }
 
 
-function createTableFromJSON(data) {
+function createTableFromJSONcar(data) {
     var html = "<table><tr><th>Category</th><th>Value</th></tr>";
-    for (const x in data) {
-        var category = x;
-        var value = data[x];
-        html += "<tr><td>" + category + "</td><td>" + value + "</td></tr>";
+
+    for (var i = 0; i < data.length; i++) {
+        var car = data[i];
+
+        html += "<tr><td>Vehicle ID</td><td>" + car.vehicle_id + "</td></tr>";
+        html += "<tr><td>Registration Number</td><td>" + car.registration_number + "</td></tr>";
+        html += "<tr><td>Type</td><td>" + car.type + "</td></tr>";
+        html += "<tr><td>Number of Passengers</td><td>" + car.number_of_passengers + "</td></tr>";
     }
+
     html += "</table>";
     return html;
-
 }
 
 
-
-function getUser() {
+function getAvailableCars() {
     var xhr = new XMLHttpRequest();
     xhr.onload = function () {
         if (xhr.readyState === 4 && xhr.status === 200) {
-            $("#ajaxContent").html(createTableFromJSON(JSON.parse(xhr.responseText)));
-            //  $("#ajaxContent").html("Successful Login");
+            $("#ajaxContent").html(createTableFromJSONcar(JSON.parse(xhr.responseText)));
         } else if (xhr.status !== 200) {
-            $("#ajaxContent").html("User not exists or incorrect password");
+            $("#ajaxContent").html("Error fetching available cars");
         }
     };
-    var data = $('#loginForm').serialize();
-    xhr.open('GET', 'GetKeeper?' + data);
-    xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+
+    xhr.open('GET', 'GetAvailableCars');
     xhr.send();
 }
