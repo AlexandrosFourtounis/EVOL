@@ -80,13 +80,6 @@ public class InitDatabase {
     public void addToDatabaseExamples() throws ClassNotFoundException, SQLException {
         //Users
 
-        EditCarTable eut = new EditCarTable();
-        eut.addcarFromJSON(Resources.CartoJSON1);
-        eut.addcarFromJSON(Resources.CartoJSON2);
-        eut.addcarFromJSON(Resources.CartoJSON3);
-        eut.addcarFromJSON(Resources.CartoJSON4);
-        eut.addcarFromJSON(Resources.CartoJSON5);
-
         EditCustomerTable editc = new EditCustomerTable();
         editc.addCustomerFromJSON(Resources.CustomertoJSON1);
         editc.addCustomerFromJSON(Resources.CustomertoJSON2);
@@ -121,6 +114,14 @@ public class InitDatabase {
         vhe.addVehicleFromJSON(Resources.vehicle3);
         vhe.addVehicleFromJSON(Resources.vehicle4);
         vhe.addVehicleFromJSON(Resources.vehicle5);
+
+        EditCarTable eut = new EditCarTable();
+        eut.addcarFromJSON(Resources.CartoJSON1);
+        eut.addcarFromJSON(Resources.CartoJSON2);
+        eut.addcarFromJSON(Resources.CartoJSON3);
+        eut.addcarFromJSON(Resources.CartoJSON4);
+        eut.addcarFromJSON(Resources.CartoJSON5);
+
 
 //        EditMotorcycleTable motr = new EditMotorcycleTable();
 //        motr.addMotorcycleFromJSON(Resources.MotorcycletoJSON1);

@@ -168,8 +168,8 @@ public class EditCarTable {
 
         String query = "CREATE TABLE Car "
                 + "(vehicle_id INTEGER not null unique, "
-                + "    registration_number INTEGER not null unique,"
-                + "    car_type VARCHAR(20),	"
+                + "    registration_number INTEGER not null,"
+                + "    car_type VARCHAR(20), "
                 + "    number_of_passengers INTEGER,"
                  + " FOREIGN KEY (vehicle_id) REFERENCES Vehicle(vehicle_id))";
         stmt.execute(query);
@@ -230,6 +230,7 @@ public class EditCarTable {
                     + "'" + car.getRegistration_number() + "',"
                     + "'" + car.getType() + "',"
                     + "'" + car.getNumber_of_passengers() + "',"
+                    + "'" + car.getAvailable() + "'"
                     + ")";
             //stmt.execute(table);
             System.out.println(insertQuery);
