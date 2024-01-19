@@ -95,6 +95,8 @@ public class EditReportTable {
                 + " report_date DATE,"
                 + " insurance_paid BOOLEAN, "
                 + " repair_cost DOUBLE, "
+                //+ " FOREIGN KEY(customer_id) REFERENCES Customer(customer_id), "
+                //+ " FOREIGN KEY(vehicle_id) REFERENCES Vehicle(vehicle_id), "
                 + " PRIMARY KEY(report_id))";
 
         stmt.execute(query);
