@@ -8,29 +8,29 @@ function initDB() {
     var xhr = new XMLHttpRequest();
     xhr.onload = function () {
         if (xhr.readyState === 4 && xhr.status === 200) {
-              $("#ajaxContent").html("Successful Initialization");
+            alert("Database initialization successful");
         } else if (xhr.status !== 200) {
-             $("#ajaxContent").html("Error Occured");
+            alert("Error occurred during database initialization");
         }
     };
 
     xhr.open('GET', 'InitDB');
-    xhr.setRequestHeader('Content-type','application/x-www-form-urlencoded');
     xhr.send();
 }
+
 
 function deleteDB() {
     var xhr = new XMLHttpRequest();
     xhr.onload = function () {
         if (xhr.readyState === 4 && xhr.status === 200) {
-              $("#ajaxContent").html("Successful Deletion");
+            $("#ajaxContent").html("Successful Deletion");
         } else if (xhr.status !== 200) {
-             $("#ajaxContent").html("Error Occured");
+            $("#ajaxContent").html("Error Occured");
         }
     };
 
     xhr.open('GET', 'DeleteDB');
-    xhr.setRequestHeader('Content-type','application/x-www-form-urlencoded');
+    xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
     xhr.send();
 }
 
@@ -54,13 +54,13 @@ function getUser() {
     xhr.onload = function () {
         if (xhr.readyState === 4 && xhr.status === 200) {
             $("#ajaxContent").html(createTableFromJSON(JSON.parse(xhr.responseText)));
-          //  $("#ajaxContent").html("Successful Login");
+            //  $("#ajaxContent").html("Successful Login");
         } else if (xhr.status !== 200) {
-             $("#ajaxContent").html("User not exists or incorrect password");
+            $("#ajaxContent").html("User not exists or incorrect password");
         }
     };
     var data = $('#loginForm').serialize();
-    xhr.open('GET', 'GetKeeper?'+data);
-    xhr.setRequestHeader('Content-type','application/x-www-form-urlencoded');
+    xhr.open('GET', 'GetKeeper?' + data);
+    xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
     xhr.send();
 }
