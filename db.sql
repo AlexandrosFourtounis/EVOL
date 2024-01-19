@@ -165,6 +165,13 @@ LEFT JOIN Bicycle b ON r.vehicle_id = b.vehicle_id
 LEFT JOIN Electric_scooter es ON r.vehicle_id = es.vehicle_id
 WHERE r.rental_date BETWEEN '2020-01-01' AND '2023-01-01';
 
+/*Query5*/
+SELECT
+    SUM(report.repair_cost) AS total_repair_costs
+FROM
+    Report report
+WHERE
+    report.report_date BETWEEN "2024-01-01" AND "2025-01-01"
 
 
 INSERT INTO  Vehicle (vehicle_id,color,brand,autonomy,daily_rental_cost,daily_insurance_cost,available) VALUES ('1','Blue','Nissan','500','500','500','no')
