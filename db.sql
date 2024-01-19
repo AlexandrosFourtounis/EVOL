@@ -164,3 +164,105 @@ LEFT JOIN Motorcycle m ON r.vehicle_id = m.vehicle_id
 LEFT JOIN Bicycle b ON r.vehicle_id = b.vehicle_id
 LEFT JOIN Electric_scooter es ON r.vehicle_id = es.vehicle_id
 WHERE r.rental_date BETWEEN '2020-01-01' AND '2023-01-01';
+
+
+
+INSERT INTO  Vehicle (vehicle_id,color,brand,autonomy,daily_rental_cost,daily_insurance_cost,available) VALUES ('1','Blue','Nissan','500','500','500','no')
+
+INSERT INTO  Vehicle (vehicle_id,color,brand,autonomy,daily_rental_cost,daily_insurance_cost,available) VALUES ('2','Black','Lamborghini','360','360','360','yes')
+
+INSERT INTO  Vehicle (vehicle_id,color,brand,autonomy,daily_rental_cost,daily_insurance_cost,available) VALUES ('3','White','Opel','550','550','550','no')
+
+INSERT INTO  Vehicle (vehicle_id,color,brand,autonomy,daily_rental_cost,daily_insurance_cost,available) VALUES ('4','Red','Ferrari','250','250','250','yes')
+
+INSERT INTO  Vehicle (vehicle_id,color,brand,autonomy,daily_rental_cost,daily_insurance_cost,available) VALUES ('5','Gray','Mercedes','700','700','700','no')
+
+INSERT INTO  Vehicle (vehicle_id,color,brand,autonomy,daily_rental_cost,daily_insurance_cost,available) VALUES ('6','Blue','Nissan','500','500','500','no')
+
+INSERT INTO  Vehicle (vehicle_id,color,brand,autonomy,daily_rental_cost,daily_insurance_cost,available) VALUES ('7','Black','Lamborghini','360','360','360','yes')
+
+INSERT INTO  Vehicle (vehicle_id,color,brand,autonomy,daily_rental_cost,daily_insurance_cost,available) VALUES ('8','White','Opel','550','550','550','no')
+
+INSERT INTO  Vehicle (vehicle_id,color,brand,autonomy,daily_rental_cost,daily_insurance_cost,available) VALUES ('9','Red','Ferrari','250','250','250','yes')
+
+INSERT INTO  Vehicle (vehicle_id,color,brand,autonomy,daily_rental_cost,daily_insurance_cost,available) VALUES ('10','Gray','Mercedes','700','700','700','no')
+
+INSERT INTO  Vehicle (vehicle_id,color,brand,autonomy,daily_rental_cost,daily_insurance_cost,available) VALUES ('11','Blue','Nissan','500','500','500','no')
+
+INSERT INTO  Vehicle (vehicle_id,color,brand,autonomy,daily_rental_cost,daily_insurance_cost,available) VALUES ('12','Black','Lamborghini','360','360','360','yes')
+
+INSERT INTO  Vehicle (vehicle_id,color,brand,autonomy,daily_rental_cost,daily_insurance_cost,available) VALUES ('13','White','Opel','550','550','550','no')
+
+INSERT INTO  Vehicle (vehicle_id,color,brand,autonomy,daily_rental_cost,daily_insurance_cost,available) VALUES ('14','Red','Ferrari','250','250','250','yes')
+
+INSERT INTO  Vehicle (vehicle_id,color,brand,autonomy,daily_rental_cost,daily_insurance_cost,available) VALUES ('15','Gray','Mercedes','700','700','700','no')
+
+INSERT INTO  Vehicle (vehicle_id,color,brand,autonomy,daily_rental_cost,daily_insurance_cost,available) VALUES ('16','Blue','Nissan','500','500','500','no')
+
+INSERT INTO  Vehicle (vehicle_id,color,brand,autonomy,daily_rental_cost,daily_insurance_cost,available) VALUES ('17','Black','Lamborghini','360','360','360','yes')
+
+INSERT INTO  Vehicle (vehicle_id,color,brand,autonomy,daily_rental_cost,daily_insurance_cost,available) VALUES ('18','White','Opel','550','550','550','no')
+
+INSERT INTO  Vehicle (vehicle_id,color,brand,autonomy,daily_rental_cost,daily_insurance_cost,available) VALUES ('19','Red','Ferrari','250','250','250','yes')
+
+INSERT INTO  Vehicle (vehicle_id,color,brand,autonomy,daily_rental_cost,daily_insurance_cost,available) VALUES ('20','Gray','Mercedes','700','700','700','no')
+
+INSERT INTO Report (report_id, malfunction_description, report_date, insurance_paid, repair_cost, customer_id, vehicle_id) VALUES ('1','Disko/Plato','2024-10-30','FALSE','600.0','1','10')
+
+INSERT INTO Report (report_id, malfunction_description, report_date, insurance_paid, repair_cost, customer_id, vehicle_id) VALUES ('2','Zygostathmisi','2024-7-23','TRUE','100.0','2','2')
+
+INSERT INTO Report (report_id, malfunction_description, report_date, insurance_paid, repair_cost, customer_id, vehicle_id) VALUES ('3','Mpataria','2024-01-19','FALSE','500.0','3','13')
+
+INSERT INTO Report (report_id, malfunction_description, report_date, insurance_paid, repair_cost, customer_id, vehicle_id) VALUES ('4','Provolakia Omixlhs','2024-5-5','TRUE','30.0','4','14')
+
+INSERT INTO Report (report_id, malfunction_description, report_date, insurance_paid, repair_cost, customer_id, vehicle_id) VALUES ('5','Skasmeno Lastixo','2024-03-25','FALSE','250.0','5','1')
+
+INSERT INTO Rental (rental_id, first_name, last_name, rental_date, duration, cost, customer_id, vehicle_id) VALUES ('101','akis','papakis','2022-04-16','10','450','1','1')
+
+INSERT INTO Rental (rental_id, first_name, last_name, rental_date, duration, cost, customer_id, vehicle_id) VALUES ('202','manos','papas','2023-08-11','5','1400','2','2')
+
+INSERT INTO Rental (rental_id, first_name, last_name, rental_date, duration, cost, customer_id, vehicle_id) VALUES ('303','ariadni','mixail','2023-02-18','2','84','3','3')
+
+INSERT INTO Rental (rental_id, first_name, last_name, rental_date, duration, cost, customer_id, vehicle_id) VALUES ('404','charalabos','arampatzis','2024-01-02','1','470','4','4')
+
+INSERT INTO Rental (rental_id, first_name, last_name, rental_date, duration, cost, customer_id, vehicle_id) VALUES ('505','aggela','eftimiou','2023-06-06','3','720','5','5')
+
+INSERT INTO  car (vehicle_id,registration_number,type,number_of_passengers) VALUES ('1','123','porshe','4')
+
+INSERT INTO  car (vehicle_id,registration_number,type,number_of_passengers) VALUES ('2','1232','fiat panda','2')
+
+INSERT INTO  car (vehicle_id,registration_number,type,number_of_passengers) VALUES ('3','1323','mercedes','4')
+
+INSERT INTO  car (vehicle_id,registration_number,type,number_of_passengers) VALUES ('4','4123','lambo','2')
+
+INSERT INTO  car (vehicle_id,registration_number,type,number_of_passengers) VALUES ('5','155','skoda','4')
+
+INSERT INTO  Motorcycle (vehicle_id,registration_number) VALUES ('6','1223')
+
+INSERT INTO  Motorcycle (vehicle_id,registration_number) VALUES ('7','222')
+
+INSERT INTO  Motorcycle (vehicle_id,registration_number) VALUES ('8','12223')
+
+INSERT INTO  Motorcycle (vehicle_id,registration_number) VALUES ('9','12238')
+
+INSERT INTO  Motorcycle (vehicle_id,registration_number) VALUES ('10','12239')
+
+INSERT INTO  Bicycle (Vehicle_id,Special_number) VALUES ('11','123')
+
+INSERT INTO  Bicycle (Vehicle_id,Special_number) VALUES ('12','456')
+
+INSERT INTO  Bicycle (Vehicle_id,Special_number) VALUES ('13','789')
+
+INSERT INTO  Bicycle (Vehicle_id,Special_number) VALUES ('14','101')
+
+INSERT INTO  Bicycle (Vehicle_id,Special_number) VALUES ('15','102')
+
+INSERT INTO  Electric_Scooter (Vehicle_id,Special_number) VALUES ('16','123')
+
+INSERT INTO  Electric_Scooter (Vehicle_id,Special_number) VALUES ('17','456')
+
+INSERT INTO  Electric_Scooter (Vehicle_id,Special_number) VALUES ('18','789')
+
+INSERT INTO  Electric_Scooter (Vehicle_id,Special_number) VALUES ('19','101')
+
+INSERT INTO  Electric_Scooter (Vehicle_id,Special_number) VALUES ('20','102')
