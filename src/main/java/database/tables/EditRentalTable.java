@@ -121,7 +121,7 @@ public class EditRentalTable {
                     + "Rental (rental_id, first_name, last_name, rental_date, duration, cost, customer_id, vehicle_id)"
                     + " VALUES ("
                     + "'" + user.getRental_id() + "',"
-                    + "'" + user.getFisrt_name() + "',"
+                    + "'" + user.getFirst_name() + "',"
                     + "'" + user.getLast_name() + "',"
                     + "'" + user.getRental_date() + "',"
                     + "'" + user.getDuration() + "',"

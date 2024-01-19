@@ -11,7 +11,7 @@ package mainClasses;
  */
 public class Rental {
     int rental_id, customer_id, vehicle_id;
-    String fisrt_name, last_name, rental_date;
+    String first_name, last_name, rental_date;
     int duration, cost;
 
     public int getRental_id() {
@@ -38,12 +38,12 @@ public class Rental {
         this.vehicle_id = vehicle_id;
     }
 
-    public String getFisrt_name() {
-        return fisrt_name;
+    public String getFirst_name() {
+        return first_name;
     }
 
-    public void setFisrt_name(String fisrt_name) {
-        this.fisrt_name = fisrt_name;
+    public void setFirst_name(String fisrt_name) {
+        this.first_name = fisrt_name;
     }
 
     public String getLast_name() {

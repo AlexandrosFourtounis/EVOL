@@ -113,7 +113,7 @@ public class EditReportTable {
             Statement stmt = con.createStatement();
 
             String insertQuery = "INSERT INTO "
-                    + " Report (report_id,malfunction_description,report_date,insurance_paid,repair_cost,customer_id,vehicle_id"
+                    + "Report (report_id, malfunction_description, report_date, insurance_paid, repair_cost, customer_id, vehicle_id)"
                     + " VALUES ("
                     + "'" + user.getReport_id() + "',"
                     + "'" + user.getMalfunction_description() + "',"
@@ -121,8 +121,9 @@ public class EditReportTable {
                     + "'" + user.getInsurance_paid() + "',"
                     + "'" + user.getRepair_cost() + "',"
                     + "'" + user.getCustomer_id() + "',"
-                    + "'" + user.getVehicle_id() + "',"
+                    + "'" + user.getVehicle_id() + "'"
                     + ")";
+
             //stmt.execute(table);
             System.out.println(insertQuery);
             stmt.executeUpdate(insertQuery);
