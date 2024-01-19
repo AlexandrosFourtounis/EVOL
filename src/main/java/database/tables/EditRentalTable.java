@@ -23,7 +23,7 @@ public class EditRentalTable {
 
     public void addRentalFromJSON(String json) throws ClassNotFoundException {
         Rental user = jsonToRental(json);
-        //addNewRental(user);
+        addRental(user);
     }
 
     public Rental jsonToRental(String json) {
@@ -118,7 +118,7 @@ public class EditRentalTable {
             Statement stmt = con.createStatement();
 
             String insertQuery = "INSERT INTO "
-                    + " Rental (rental_id,first_name,last_name,rental_date,duration,cost,customer_id,vehicle_id"
+                    + "Rental (rental_id, first_name, last_name, rental_date, duration, cost, customer_id, vehicle_id)"
                     + " VALUES ("
                     + "'" + user.getRental_id() + "',"
                     + "'" + user.getFisrt_name() + "',"
@@ -127,8 +127,9 @@ public class EditRentalTable {
                     + "'" + user.getDuration() + "',"
                     + "'" + user.getCost() + "',"
                     + "'" + user.getCustomer_id() + "',"
-                    + "'" + user.getVehicle_id() + "',"
+                    + "'" + user.getVehicle_id() + "'"
                     + ")";
+
             //stmt.execute(table);
             System.out.println(insertQuery);
             stmt.executeUpdate(insertQuery);
