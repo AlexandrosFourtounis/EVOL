@@ -101,3 +101,26 @@ function getAvailableCars() {
     xhr.open('GET', 'GetAvailableCars');
     xhr.send();
 }
+
+
+//mitsos
+function registerNewUser() {
+    var xhr = new XMLHttpRequest();
+
+    xhr.onload = function () {
+        if (xhr.readyState === 4) {
+            if (xhr.status === 200) {
+                $("#ajaxContent").html("Registration successful");
+            } else if (xhr.status === 409) {
+                $("#ajaxContent").html("User already exists");
+            } else {
+                $("#ajaxContent").html("Error occurred during registration");
+            }
+        }
+    };
+
+    var formData = $('#registerForm').serialize();
+    xhr.open('POST', 'RegisterUser'); // Adjust the endpoint accordingly
+    xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+    xhr.send(formData);
+}

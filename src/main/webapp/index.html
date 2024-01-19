@@ -35,6 +35,68 @@
                 <div id="ajaxContent"></div>
 
             </div>
+
+            <div class="row">
+                <div class="column column1Width" id="choices" style="background-color:#ffffff;">           
+                    <button  class="button" onclick="initDB()">Initialize Database</button>
+                    <button  class="button" onclick="deleteDB()">Delete Database</button>
+                </div>
+                <div class="column column2Width" id="register" style="background-color:#00bfff;">
+                    <h2>Register</h2>
+                    <form id="registerForm" name="registerForm" onsubmit='registerUser();return false;'>
+                        <label for="firstName">First Name:</label>
+                        <input type="text" id="firstName" name="firstName" required>
+        
+                        <label for="lastName">Last Name:</label>
+                        <input type="text" id="lastName" name="lastName" required><br>
+        
+                        <label for="street">Street:</label>
+                        <input type="text" id="street" name="street" required>
+        
+                        <label for="city">City:</label>
+                        <input type="text" id="city" name="city" required>
+        
+                        <label for="region">Region:</label>
+                        <input type="text" id="region" name="region" required>
+        
+                        <label for="postalCode">Postal Code:</label>
+                        <input type="text" id="postalCode" name="postalCode" required>
+        
+                        <label for="dob">Date of Birth:</label>
+                        <input type="date" id="dob" name="dob" required>
+        
+                        <label for="age">Age:</label>
+                        <input type="number" id="age" name="age" required><br>
+        
+                        <label for="licenseNumber">Driver's License Number:</label>
+                        <input type="text" id="licenseNumber" name="licenseNumber" required><br>
+        
+                        <label for="creditCardNumber">Credit Card Number:</label>
+                        <input type="text" id="creditCardNumber" name="creditCardNumber" required>
+        
+                        <label for="expirationDate">Expiration Date:</label>
+                        <input type="text" id="expirationDate" name="expirationDate" placeholder="MM/YYYY" required>
+        
+                        <label for="securityCode">Security Code:</label>
+                        <input type="text" id="securityCode" name="securityCode" required><br>
+        
+                        <input type="submit" class="button" value="Register">
+                    </form>
+                </div>
+                <div class="column column3Width" id="login" style="background: color #00bfff;;">
+                    <h2>Login</h2>
+                    <form id="loginForm" name="loginForm" onsubmit='loginUser();return false;'>
+                        <label for="loginUsername">Username:</label><br>
+                        <input type="text" id="loginUsername" name="loginUsername" required><br>
+        
+                        <label for="loginPassword">Password:</label><br>
+                        <input type="password" id="loginPassword" name="loginPassword" required><br>
+        
+                        <input type="submit" class="button" value="Login">
+                     </form>
+                </div>
+
+    
         </div>
         <br>
     </body>
