@@ -14,6 +14,9 @@ public class Car extends Vehicle {
     int registration_number, number_of_passengers;
     String type;
 
+    public String getAvailable() {
+        return super.available;
+    }
     public int getVehicle_id() {
         return vehicle_id;
     }

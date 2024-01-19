@@ -224,13 +224,12 @@ public class EditCarTable {
             Statement stmt = con.createStatement();
 
             String insertQuery = "INSERT INTO "
-                    + " car (car_id,color,brand,autonomy,daily_rental_cost,daily_insurance_cost,available)"
+                    + " car (vehicle_id,registration_number,type,number_of_passengers)"
                     + " VALUES ("
                     + "'" + car.getVehicle_id() + "',"
                     + "'" + car.getRegistration_number() + "',"
                     + "'" + car.getType() + "',"
-                    + "'" + car.getNumber_of_passengers() + "',"
-                    + "'" + car.getAvailable() + "'"
+                    + "'" + car.getNumber_of_passengers() + "'"
                     + ")";
             //stmt.execute(table);
             System.out.println(insertQuery);
