@@ -80,19 +80,19 @@ public class InitDatabase {
     public void addToDatabaseExamples() throws ClassNotFoundException, SQLException {
         //Users
 
-        EditCustomerTable editc = new EditCustomerTable();
-        editc.addCustomerFromJSON(Resources.CustomertoJSON1);
-        editc.addCustomerFromJSON(Resources.CustomertoJSON2);
-        editc.addCustomerFromJSON(Resources.CustomertoJSON3);
-        editc.addCustomerFromJSON(Resources.CustomertoJSON4);
-        editc.addCustomerFromJSON(Resources.CustomertoJSON5);
-
         EditRegistrationTable ebt = new EditRegistrationTable();
         ebt.addRegistrationFromJSON(Resources.registration1);
         ebt.addRegistrationFromJSON(Resources.registration2);
         ebt.addRegistrationFromJSON(Resources.registration3);
         ebt.addRegistrationFromJSON(Resources.registration4);
         ebt.addRegistrationFromJSON(Resources.registration5);
+
+        EditCustomerTable editc = new EditCustomerTable();
+        editc.addCustomerFromJSON(Resources.CustomertoJSON1);
+        editc.addCustomerFromJSON(Resources.CustomertoJSON2);
+        editc.addCustomerFromJSON(Resources.CustomertoJSON3);
+        editc.addCustomerFromJSON(Resources.CustomertoJSON4);
+        editc.addCustomerFromJSON(Resources.CustomertoJSON5);
 
         EditRentalTable ren = new EditRentalTable();
         ren.addRentalFromJSON(Resources.rental1);

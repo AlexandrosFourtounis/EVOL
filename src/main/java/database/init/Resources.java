@@ -39,7 +39,7 @@ public class Resources {
             + "\"age\":\"25\","
             + "\"drivers\":\"Alex\"}";
     static String CustomertoJSON5 = "{\"customer_id\":\"5\",\"registration_id\":\"55\",\"firstname\":\"niskos\","
-            + "\"lastname\":\"nikolaidis\",\"street\":\"theodoulou18\",\"date_of_birth\":\"2003\",\"drivers_licence_number\":\"123426789\","
+            + "\"lastname\":\"nikolaidis\",\"street\":\"theodoulou18\",\"date_of_birth\":\"2003\",\"drivers_licence_number\":\"123826789\","
             + "\"credit_card_number\":\"555988\",\"expiration_date\":\"19of26\",\"security_code\":\"486\",\"city\":\"Heraklio\","
             + "\"region\":\"Heraklion\",\"zip_code\":\"71305\","
             + "\"age\":\"25\","
