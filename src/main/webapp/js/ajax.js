@@ -27,7 +27,7 @@ function loginPOST() {
 
             $("#ajaxContent").html("Successful Login");
             const responseData = JSON.parse(xhr.responseText);
-            $('#ajaxContent').append(createTableFromJSON(responseData));
+
         } else if (xhr.status !== 200) {
             $("#error").html("Wrong Credentials");
             ('Request failed. Returned status of ' + xhr.status);

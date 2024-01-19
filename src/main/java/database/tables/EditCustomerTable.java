@@ -78,7 +78,7 @@ public class EditCustomerTable {
 
         ResultSet rs;
         try {
-            rs = stmt.executeQuery("SELECT * FROM Customer WHERE username = '" + username + "' AND password='" + password + "'");
+            rs = stmt.executeQuery("SELECT * FROM Registration WHERE username = '" + username + "' AND pass='" + password + "'");
             rs.next();
             String json = DB_Connection.getResultsToJSON(rs);
             Gson gson = new Gson();
