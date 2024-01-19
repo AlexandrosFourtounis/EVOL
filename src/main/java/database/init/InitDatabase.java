@@ -146,19 +146,19 @@ public class InitDatabase {
         motr.addMotorcycleFromJSON(Resources.MotorcycletoJSON4);
         motr.addMotorcycleFromJSON(Resources.MotorcycletoJSON5);
 
-//        EditBicycleTable bicy = new EditBicycleTable();
-//        bicy.addBicycleFromJSON(Resources.Bicycle1);
-//        bicy.addBicycleFromJSON(Resources.Bicycle2);
-//        bicy.addBicycleFromJSON(Resources.Bicycle3);
-//        bicy.addBicycleFromJSON(Resources.Bicycle4);
-//        bicy.addBicycleFromJSON(Resources.Bicycle5);
-//
-//        EditElectricScooterTable elec = new EditElectricScooterTable();
-//        elec.addElectricScooterFromJSON(Resources.ElectricScooter1);
-//        elec.addElectricScooterFromJSON(Resources.ElectricScooter2);
-//        elec.addElectricScooterFromJSON(Resources.ElectricScooter3);
-//        elec.addElectricScooterFromJSON(Resources.ElectricScooter4);
-//        elec.addElectricScooterFromJSON(Resources.ElectricScooter5);
+        EditBicycleTable bicy = new EditBicycleTable();
+        bicy.addBicycleFromJSON(Resources.Bicycle1);
+        bicy.addBicycleFromJSON(Resources.Bicycle2);
+        bicy.addBicycleFromJSON(Resources.Bicycle3);
+        bicy.addBicycleFromJSON(Resources.Bicycle4);
+        bicy.addBicycleFromJSON(Resources.Bicycle5);
+
+        EditElectricScooterTable elec = new EditElectricScooterTable();
+        elec.addElectricScooterFromJSON(Resources.ElectricScooter1);
+        elec.addElectricScooterFromJSON(Resources.ElectricScooter2);
+        elec.addElectricScooterFromJSON(Resources.ElectricScooter3);
+        elec.addElectricScooterFromJSON(Resources.ElectricScooter4);
+        elec.addElectricScooterFromJSON(Resources.ElectricScooter5);
     }
 
     /*

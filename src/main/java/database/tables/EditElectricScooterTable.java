@@ -170,7 +170,6 @@ public class EditElectricScooterTable {
                  + "("
                  + "special_number INTEGER not null unique,"
                  + "vehicle_id INTEGER not null, "
-                 + "PRIMARY KEY (special_number), "
                  +"FOREIGN KEY (vehicle_id) REFERENCES Vehicle(vehicle_id))";
         stmt.execute(query);
         stmt.close();

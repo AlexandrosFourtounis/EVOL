@@ -260,34 +260,34 @@ public class Resources {
             + "\"insurance_paid\":\"no\","
             + "\"repair_cost\":\"250\"}";
 
-    static String ElectricScooter1 = "{\"vehicle_id\":\"1\","
+    static String ElectricScooter1 = "{\"vehicle_id\":\"16\","
             + "\"special_number\":\"123\"}";
 
-    static String ElectricScooter2 = "{\"vehicle_id\":\"2\","
+    static String ElectricScooter2 = "{\"vehicle_id\":\"17\","
             + "\"special_number\":\"456\"}";
 
-    static String ElectricScooter3 = "{\"vehicle_id\":\"3\","
+    static String ElectricScooter3 = "{\"vehicle_id\":\"18\","
             + "\"special_number\":\"789\"}";
 
-    static String ElectricScooter4 = "{\"vehicle_id\":\"4\","
+    static String ElectricScooter4 = "{\"vehicle_id\":\"19\","
             + "\"special_number\":\"101\"}";
 
-    static String ElectricScooter5 = "{\"vehicle_id\":\"5\","
+    static String ElectricScooter5 = "{\"vehicle_id\":\"20\","
             + "\"special_number\":\"102\"}";
 
-    static String Bicycle1 = "{\"vehicle_id\":\"1\","
+    static String Bicycle1 = "{\"vehicle_id\":\"11\","
             + "\"special_number\":\"123\"}";
 
-    static String Bicycle2 = "{\"vehicle_id\":\"2\","
+    static String Bicycle2 = "{\"vehicle_id\":\"12\","
             + "\"special_number\":\"456\"}";
 
-    static String Bicycle3 = "{\"vehicle_id\":\"3\","
+    static String Bicycle3 = "{\"vehicle_id\":\"13\","
             + "\"special_number\":\"789\"}";
 
-    static String Bicycle4 = "{\"vehicle_id\":\"4\","
+    static String Bicycle4 = "{\"vehicle_id\":\"14\","
             + "\"special_number\":\"101\"}";
 
-    static String Bicycle5 = "{\"vehicle_id\":\"5\","
+    static String Bicycle5 = "{\"vehicle_id\":\"15\","
             + "\"special_number\":\"102\"}";
 
         static String registration1 = "{\"registration_id\":\"11\",\"customer_id\":\"1\",\"username\":\"anton3\","

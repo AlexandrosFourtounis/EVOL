@@ -168,8 +168,8 @@ public class EditBicycleTable {
 
         String query = "CREATE TABLE Bicycle "
                 + "(Vehicle_id INTEGER not null, "
-                 + "    Special_number INTEGER not null unique,"
-                 + "PRIMARY KEY (special_number))";
+                 + "Special_number INTEGER not null unique,"
+                 + " FOREIGN KEY (vehicle_id) REFERENCES Vehicle(vehicle_id))";
         stmt.execute(query);
         stmt.close();
     }
@@ -225,7 +225,7 @@ public class EditBicycleTable {
                     + " Bicycle (Vehicle_id,Special_number)"
                     + " VALUES ("
                     + "'" + Bicycle.getVehicle_id() + "',"
-                    + "'" + Bicycle.getSpecial_number() + "',"
+                    + "'" + Bicycle.getSpecial_number() + "'"
                     + ")";
             //stmt.execute(table);
             System.out.println(insertQuery);
