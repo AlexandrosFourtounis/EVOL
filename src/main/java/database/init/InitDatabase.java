@@ -131,6 +131,21 @@ public class InitDatabase {
         ren.addRentalFromJSON(Resources.rental3);
         ren.addRentalFromJSON(Resources.rental4);
         ren.addRentalFromJSON(Resources.rental5);
+        ren.addRentalFromJSON(Resources.rental6);
+        ren.addRentalFromJSON(Resources.rental7);
+        ren.addRentalFromJSON(Resources.rental8);
+        ren.addRentalFromJSON(Resources.rental9);
+        ren.addRentalFromJSON(Resources.rental10);
+        ren.addRentalFromJSON(Resources.rental11);
+        ren.addRentalFromJSON(Resources.rental12);
+        ren.addRentalFromJSON(Resources.rental13);
+        ren.addRentalFromJSON(Resources.rental14);
+        ren.addRentalFromJSON(Resources.rental15);
+        ren.addRentalFromJSON(Resources.rental16);
+        ren.addRentalFromJSON(Resources.rental17);
+        ren.addRentalFromJSON(Resources.rental18);
+        ren.addRentalFromJSON(Resources.rental19);
+        ren.addRentalFromJSON(Resources.rental20);
 
         EditCarTable eut = new EditCarTable();
         eut.addcarFromJSON(Resources.CartoJSON1);

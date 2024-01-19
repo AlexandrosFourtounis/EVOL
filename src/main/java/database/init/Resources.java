@@ -361,5 +361,140 @@ public class Resources {
             + "\"duration\":\"3\","
             + "\"cost\":\"720\"   }";
 
+    static String rental6 = "{\"rental_id\":\"606\","
+            + "\"customer_id\":\"1\","
+            + "\"vehicle_id\":\"6\","
+            + "\"first_name\":\"akis\","
+            + "\"last_name\":\"papakis\","
+            + "\"rental_date\":\"2022-04-16\","
+            + "\"duration\":\"10\","
+            + "\"cost\":\"30\"   }";
+
+    static String rental7 = "{\"rental_id\":\"7047\","
+            + "\"customer_id\":\"2\","
+            + "\"vehicle_id\":\"7\","
+            + "\"first_name\":\"manos\","
+            + "\"last_name\":\"papas\","
+            + "\"rental_date\":\"2023-08-11\","
+            + "\"duration\":\"5\","
+            + "\"cost\":\"33\"   }";
+
+    static String rental8 = "{\"rental_id\":\"8048\","
+            + "\"customer_id\":\"3\","
+            + "\"vehicle_id\":\"8\","
+            + "\"first_name\":\"maria\","
+            + "\"last_name\":\"mixail\","
+            + "\"rental_date\":\"2023-02-18\","
+            + "\"duration\":\"2\","
+            + "\"cost\":\"43\"   }";
+
+    static String rental9 = "{\"rental_id\":\"1199\","
+            + "\"customer_id\":\"4\","
+            + "\"vehicle_id\":\"9\","
+            + "\"first_name\":\"charalabos\","
+            + "\"last_name\":\"arampatzis\","
+            + "\"rental_date\":\"2024-01-02\","
+            + "\"duration\":\"1\","
+            + "\"cost\":\"71\"   }";
+
+    static String rental10 = "{\"rental_id\":\"110\","
+            + "\"customer_id\":\"5\","
+            + "\"vehicle_id\":\"10\","
+            + "\"first_name\":\"aggela\","
+            + "\"last_name\":\"eftimiou\","
+            + "\"rental_date\":\"2023-06-06\","
+            + "\"duration\":\"3\","
+            + "\"cost\":\"100\"   }";
+
+    static String rental11 = "{\"rental_id\":\"111\","
+            + "\"customer_id\":\"1\","
+            + "\"vehicle_id\":\"11\","
+            + "\"first_name\":\"akis\","
+            + "\"last_name\":\"papakis\","
+            + "\"rental_date\":\"2022-04-16\","
+            + "\"duration\":\"10\","
+            + "\"cost\":\"50\"   }";
+
+    static String rental12 = "{\"rental_id\":\"112\","
+            + "\"customer_id\":\"2\","
+            + "\"vehicle_id\":\"12\","
+            + "\"first_name\":\"manos\","
+            + "\"last_name\":\"papas\","
+            + "\"rental_date\":\"2023-08-11\","
+            + "\"duration\":\"5\","
+            + "\"cost\":\"60\"   }";
+
+    static String rental13 = "{\"rental_id\":\"113\","
+            + "\"customer_id\":\"3\","
+            + "\"vehicle_id\":\"13\","
+            + "\"first_name\":\"ariadni\","
+            + "\"last_name\":\"mixail\","
+            + "\"rental_date\":\"2023-02-18\","
+            + "\"duration\":\"2\","
+            + "\"cost\":\"75\"   }";
+
+    static String rental14 = "{\"rental_id\":\"114\","
+            + "\"customer_id\":\"4\","
+            + "\"vehicle_id\":\"14\","
+            + "\"first_name\":\"charalabos\","
+            + "\"last_name\":\"arampatzis\","
+            + "\"rental_date\":\"2024-01-02\","
+            + "\"duration\":\"1\","
+            + "\"cost\":\"47\"   }";
+
+    static String rental15 = "{\"rental_id\":\"115\","
+            + "\"customer_id\":\"5\","
+            + "\"vehicle_id\":\"15\","
+            + "\"first_name\":\"aggela\","
+            + "\"last_name\":\"eftimiou\","
+            + "\"rental_date\":\"2023-06-06\","
+            + "\"duration\":\"3\","
+            + "\"cost\":\"100\"   }";
+
+    static String rental16 = "{\"rental_id\":\"116\","
+            + "\"customer_id\":\"1\","
+            + "\"vehicle_id\":\"16\","
+            + "\"first_name\":\"akis\","
+            + "\"last_name\":\"papakis\","
+            + "\"rental_date\":\"2022-04-16\","
+            + "\"duration\":\"10\","
+            + "\"cost\":\"40\"   }";
+
+    static String rental17 = "{\"rental_id\":\"117\","
+            + "\"customer_id\":\"2\","
+            + "\"vehicle_id\":\"17\","
+            + "\"first_name\":\"manos\","
+            + "\"last_name\":\"papas\","
+            + "\"rental_date\":\"2023-08-11\","
+            + "\"duration\":\"5\","
+            + "\"cost\":\"60\"   }";
+
+    static String rental18 = "{\"rental_id\":\"118\","
+            + "\"customer_id\":\"3\","
+            + "\"vehicle_id\":\"18\","
+            + "\"first_name\":\"ariadni\","
+            + "\"last_name\":\"mixail\","
+            + "\"rental_date\":\"2023-02-18\","
+            + "\"duration\":\"2\","
+            + "\"cost\":\"55\"   }";
+
+    static String rental19 = "{\"rental_id\":\"119\","
+            + "\"customer_id\":\"4\","
+            + "\"vehicle_id\":\"19\","
+            + "\"first_name\":\"charalabos\","
+            + "\"last_name\":\"arampatzis\","
+            + "\"rental_date\":\"2024-01-02\","
+            + "\"duration\":\"1\","
+            + "\"cost\":\"38\"   }";
+
+    static String rental20 = "{\"rental_id\":\"120\","
+            + "\"customer_id\":\"5\","
+            + "\"vehicle_id\":\"20\","
+            + "\"first_name\":\"aggela\","
+            + "\"last_name\":\"eftimiou\","
+            + "\"rental_date\":\"2023-06-06\","
+            + "\"duration\":\"3\","
+            + "\"cost\":\"72\"   }";
+
     public static Object registeredUsers;
 }
